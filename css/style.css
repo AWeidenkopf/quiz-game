@@ -8,25 +8,141 @@ header {
   justify-content: space-between;
 }
 
-#board{
+#board {
   display: flex;
   justify-content: center;
+  align-items: center;
+  flex-direction: column;
   border: 3px solid black;
-  margin-top: 45px;
+  min-height: 50vh;
+  margin: 45px;
+  margin-top: 20vh;
+  gap: 30px;
 }
 
-#timer{
+#timer {
   border: 3px solid black;
   display: flex;
   margin-left: 38vw;
+  margin-top: -5vh;
   justify-content: center;
   align-items: center;
   position: absolute;
   border-radius: 50%;
   height: 10%;
   width: 20%;
+  background-color: white;
 }
-#quiz-container{
+
+#quiz-container {
   display: flex;
   flex-direction: column;
+  gap: inherit;
+  margin-bottom: 5px;
+}
+
+@media only screen and (min-width: 600px) {
+  #board {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: 3px solid black;
+    margin-top: 22vh;
+    min-height: 35vh;
+  }
+
+  #timer {
+    border: 3px solid black;
+    display: flex;
+    margin-left: 40vw;
+    margin-top: -7vh;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    border-radius: 50%;
+    height: 13%;
+    width: 18%;
+    background-color: white;
+  }
+
+  #quiz-container {
+    display: grid;
+    grid-template-columns: 50px 50px;
+    grid-template-rows: auto;
+    grid-template-areas:
+      "opA opC"
+      "opB opD";
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+
+  }
+
+  .optionA {
+    grid-area: opA;
+  }
+
+  .optionB {
+    grid-area: opB;
+  }
+
+  .optionC {
+    grid-area: opC;
+  }
+
+  .optionD {
+    grid-area: opD;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+
+  #game {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #board {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    flex-direction: column;
+    border: 3px solid black;
+    width: 70vw;
+    min-height: 60vh;
+    margin: 45px;
+    margin-top: 22vh;
+  }
+
+  #timer {
+    border: 3px solid black;
+    display: flex;
+    margin-left: 3vw;
+    margin-top: -45vh;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    border-radius: 50%;
+    height: 17%;
+    width: 13%;
+    background-color: white;
+  }
+
+  #quiz-container {
+    display: grid;
+    grid-template-columns: 50px 50px;
+    grid-template-rows: auto;
+    grid-template-areas:
+      "opA opC"
+      "opB opD";
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+  }
+
 }
