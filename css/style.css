@@ -1,18 +1,42 @@
 
 body {
   margin: 0;
-  background-position: center;
   height: 100vh;
+  background-position: center;
   background-image:
   linear-gradient(rgb(183, 0, 255), transparent),
   linear-gradient(to top left, lime, transparent),
   linear-gradient(to top right, blue, transparent);
   background-blend-mode: screen;
+  font-family: 'Alfa Slab One', cursive;
 }
 
 header {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
+}
+
+.resetbtn {
+  width: 70px;
+  height: 35px;
+  border-radius: 20px;
+  border: 0;
+  background-color: rgb(227, 122, 37);
+  font-family: 'Alfa Slab One', cursive;
+  font-size: 14px;
+  letter-spacing: 1px;
+  -webkit-text-stroke: 1px orangered;
+  color: white;
+  box-shadow: 0 5px 10px black;
+  text-shadow: 3px 3px 5px orangered;
+}
+
+.resetbtn:hover {
+  background-color: orangered;
+  color: white;
+  letter-spacing: 2px;
 }
 
 #board {
