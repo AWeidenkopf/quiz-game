@@ -219,6 +219,13 @@ header {
   padding: 5px 5px;
 }
 
+.correct {
+  background-color: rgb(6, 161, 65);
+}
+
+.wrong {
+  background-color: rgb(213, 37, 37);
+}
 @media only screen and (min-width: 600px) {
   body {
     min-height: 110vh;
