@@ -21,6 +21,7 @@ const categoryBox = document.getElementById("category-box")
 const categoryMsg = document.getElementById("category")
 const questionDisplay = document.getElementById("question-box")
 const arrOptions = Array.from(document.querySelectorAll(".option"))
+const scoreDisplay = document.getElementById("score")
 
 
 /*----------------------------- Event Listeners -----------------------------*/
@@ -33,13 +34,17 @@ moviesBtn.addEventListener("click", render)
 init()
 
 function init() {
-  gameContainer.style.visibility = "hidden"
+  resetBtn.style.visibility = "hidden"
+  scoreDisplay.style.visibility = "hidden"
+  gameContainer.style.display = "none"
   categoryBox.style.display = "inline-block"
 }
 
 function render(e){
+  resetBtn.style.visibility = "visible"
+  scoreDisplay.style.visibility = "visible"
   categoryBox.style.display = "none"
-  gameContainer.style.visibility = "visible"
+  gameContainer.style.display = "flex"
   categoryMsg.textContent = `${e.target.textContent}`
   renderQuestion()
 }
