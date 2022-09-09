@@ -34,6 +34,7 @@ moviesBtn.addEventListener("click", render)
 init()
 
 function init() {
+  categoryMsg.style.visibility = "hidden"
   resetBtn.style.visibility = "hidden"
   scoreDisplay.style.visibility = "hidden"
   gameContainer.style.display = "none"
@@ -41,6 +42,7 @@ function init() {
 }
 
 function render(e){
+  categoryMsg.style.visibility = "visible"
   resetBtn.style.visibility = "visible"
   scoreDisplay.style.visibility = "visible"
   categoryBox.style.display = "none"

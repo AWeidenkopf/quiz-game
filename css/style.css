@@ -8,12 +8,12 @@ body {
   linear-gradient(to top left, rgb(29, 4, 48), transparent),
   linear-gradient(to top right, rgb(4, 2, 56), transparent);
   background-blend-mode: screen;
-  font-family: 'Alfa Slab One', cursive;
   color: white;
-  
+  font-family: 'DynaPuff', cursive;;
 }
 
 header {
+  font-family: 'DynaPuff', cursive;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -142,13 +142,13 @@ header {
   border-radius: 20px;
   border: 0;
   background-color: rgb(227, 122, 37);
-  font-family: 'Alfa Slab One', cursive;
-  font-size: 14px;
+  font-family: 'DynaPuff', cursive;
+  font-size: 16px;
   letter-spacing: 1px;
   -webkit-text-stroke: 1px orangered;
   color: white;
   box-shadow: 0 5px 10px black;
-  text-shadow: 3px 3px 5px orangered;
+  text-shadow: 0 0 5px orangered;
 }
 
 .resetbtn:hover {
@@ -157,6 +157,16 @@ header {
   letter-spacing: 2px;
 }
 
+
+/* category text */
+
+#category {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  margin-bottom: 0;
+}
 /* board */
 
 #board {
@@ -167,17 +177,23 @@ header {
   border: 3px solid rgb(61, 136, 202);
   border-radius: 30px;
   min-height: 50vh;
-  margin: 45px;
-  margin-top: 20vh;
+  margin: 45px 20px 0 20px;
+  margin-top: 9vh;
   gap: 30px;
 }
+
+#board>p{
+  padding: 4vh 8vw 2vh;
+  text-align: center;
+}
+
 
 #timer {
   border: 3px dotted rgb(61, 136, 202);
   box-shadow: 0 0 5px;
   display: flex;
   margin-left: 41vw;
-  margin-top: 16vh;
+  margin-top: 5vh;
   justify-content: center;
   align-items: center;
   position: absolute;
@@ -196,6 +212,11 @@ header {
 
 #quiz-container>div{
   border: 2px solid;
+  border-radius: 10px;
+  width: 50vw;
+  max-height: 4vh;
+  text-align: center;
+  padding: 5px 5px;
 }
 
 @media only screen and (min-width: 600px) {
