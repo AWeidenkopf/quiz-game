@@ -6,6 +6,7 @@ const categories = ["Movies", "Animals", "Food", "Computer"]
 
 /*-------------------------------- Variables --------------------------------*/
 
+let winner
 
 /*------------------------ Cached Element References ------------------------*/
 // Buttons
@@ -40,10 +41,10 @@ function render(e){
   categoryBox.style.display = "none"
   gameContainer.style.visibility = "visible"
   categoryMsg.textContent = `${e.target.textContent}`
-  findCategory()
+  renderQuestion()
 }
 
-function findCategory(){
+function renderQuestion(){
   for(let el of categories){
     if(el === "Movies"){
       let currQuestion = getRandomMovieQuestion()

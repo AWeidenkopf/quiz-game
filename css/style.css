@@ -1,10 +1,17 @@
+
 body {
   margin: 0;
+  background-position: center;
+  height: 100vh;
+  background-image:
+  linear-gradient(rgb(183, 0, 255), transparent),
+  linear-gradient(to top left, lime, transparent),
+  linear-gradient(to top right, blue, transparent);
+  background-blend-mode: screen;
 }
 
 header {
   display: flex;
-  background-color: gray;
   justify-content: space-between;
 }
 
@@ -23,14 +30,14 @@ header {
 #timer {
   border: 3px solid black;
   display: flex;
-  margin-left: 38vw;
-  margin-top: -5vh;
+  margin-left: 41vw;
+  margin-top: -4vh;
   justify-content: center;
   align-items: center;
   position: absolute;
   border-radius: 50%;
-  height: 10%;
-  width: 20%;
+  height: 8%;
+  width: 17%;
   background-color: white;
 }
 
@@ -39,6 +46,10 @@ header {
   flex-direction: column;
   gap: inherit;
   margin-bottom: 5px;
+}
+
+#quiz-container>div{
+  border: 2px solid;
 }
 
 @media only screen and (min-width: 600px) {
