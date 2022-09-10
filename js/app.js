@@ -6,7 +6,7 @@ const categories = ["Movies", "Animals", "Food", "Computer"]
 
 /*-------------------------------- Variables --------------------------------*/
 
-let winner, correctAnswer, score, seconds, correctChoices
+let winner, correctAnswer, score, seconds, correctChoices, questionsCount
 
 /*------------------------ Cached Element References ------------------------*/
 // Buttons
@@ -25,6 +25,10 @@ const scoreDisplay = document.getElementById("score")
 const playerAnwer = document.getElementById("quiz-container")
 const timeDisplay =document.getElementById("timer")
 
+//Progress bar
+
+const bar = document.querySelector(".progress")
+
 
 /*----------------------------- Event Listeners -----------------------------*/
 
@@ -40,6 +44,7 @@ function init() {
   winner = null
   score = 0
   correctChoices = 0
+  questionsCount = 0
   categoryMsg.style.visibility = "hidden"
   resetBtn.style.visibility = "hidden"
   scoreDisplay.style.visibility = "hidden"
@@ -75,6 +80,7 @@ function renderQuestion() {
 
 function handleClick(e) {
   const currAttribute = e.target.getAttribute('class')
+  progressBar()
   if (e.target.textContent === correctAnswer) {
     e.target.setAttribute('class', currAttribute + ' correct animate__animated animate__flash')
     score += 100
@@ -132,4 +138,9 @@ function renderWinner() {
   } else {
     console.log('Woops! Thta was bad!')
 }
+}
+
+function progressBar() {
+  let maxQuestions = 7
+  bar.style.width =`${(questionsCount/maxQuestions) * 100}`
 }
