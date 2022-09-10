@@ -40,14 +40,14 @@ function init() {
   score = 0
   categoryMsg.style.visibility = "hidden"
   resetBtn.style.visibility = "hidden"
-  scoreDisplay.textContent = `SCORE ${score}`
   scoreDisplay.style.visibility = "hidden"
   gameContainer.style.display = "none"
   categoryBox.style.display = "inline-block"
 }
 
 
-function render(e){
+function render(e) {
+  scoreDisplay.textContent = `SCORE ${score}`
   categoryMsg.style.visibility = "visible"
   resetBtn.style.visibility = "visible"
   scoreDisplay.style.visibility = "visible"
@@ -57,38 +57,41 @@ function render(e){
   renderQuestion()
 }
 
-function renderQuestion(){
-  for(let el of categories){
-    if(el === "Movies"){
+function renderQuestion() {
+  for (let el of categories) {
+    if (el === "Movies") {
       let currQuestion = getRandomMovieQuestion()
       questionDisplay.textContent = currQuestion.question
-      for(let i = 0; i < arrOptions.length; i++){
+      for (let i = 0; i < arrOptions.length; i++) {
         arrOptions[i].textContent = currQuestion.options[i]
       }
       return correctAnswer = currQuestion.answer
     }
   }
-  clearClass()
 }
 
-function handleClick(e){
+function handleClick(e) {
   const currAttribute = e.target.getAttribute('class')
-  if(e.target.textContent === correctAnswer){
-    e.target.setAttribute('class', currAttribute + ' correct')
+  if (e.target.textContent === correctAnswer) {
+    e.target.setAttribute('class', currAttribute + ' correct animate__animated animate__flash')
   } else {
-  e.target.setAttribute('class', currAttribute + ' wrong animate__animated animate__jello')
+    e.target.setAttribute('class', currAttribute + ' wrong animate__animated animate__jello')
+  }
+  setTimeout(clearClass, 1500)
+
+}
+
+
+function clearClass() {
+  let newClass = ''
+  for (let i = 0; i < arrOptions.length; i++) {
+    const currClass = arrOptions[i].getAttribute('class')
+    if (currClass.includes('wrong')) {
+      newClass = currClass.replace(' wrong animate__animated animate__jello', '')
+    } else {
+      newClass = currClass.replace(' correct animate__animated animate__flash', '')
+    }
+    arrOptions[i].setAttribute('class', newClass)
+  }
   renderQuestion()
-  }
-
 }
-
-function clearClass(){
-for(let i = 0; i < arrOptions.length; i++){
-  const currClass = arrOptions[i].getAttribute('class')
-  console.log(currClass)
-  if(currClass.includes('wrong animate__animated animate__jello')){
-    currClass.replace('wrong animate__animated animate__jello', '')
-  }
-}
-console.log(currClass)
-  }
