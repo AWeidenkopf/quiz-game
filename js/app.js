@@ -1,4 +1,4 @@
-import { getRandomMovieQuestion } from "../data/data.js";
+import { getRandomMovieQuestion, getRandomAnimalQuestion } from "../data/data.js";
 
 /*-------------------------------- Constants --------------------------------*/
 
@@ -6,12 +6,13 @@ const categories = ["Movies", "Animals", "Food", "Computer"]
 
 /*-------------------------------- Variables --------------------------------*/
 
-let winner, correctAnswer, score, seconds, correctChoices, questionsCount
+let winner, category, currQuestion, correctAnswer, score, seconds, correctChoices, questionsCount
 
 /*------------------------ Cached Element References ------------------------*/
 // Buttons
 const resetBtn = document.getElementById("reset")
-const moviesBtn = document.getElementById("movies")
+// const moviesBtn = document.getElementById("movies")
+const categoryBtn = document.getElementById("categoriesBtns")
 
 // Containers
 const gameContainer = document.getElementById("game")
@@ -33,8 +34,9 @@ const bar = document.querySelector(".progress")
 /*----------------------------- Event Listeners -----------------------------*/
 
 resetBtn.addEventListener("click", init)
-moviesBtn.addEventListener("click", render)
+// moviesBtn.addEventListener("click", render)
 playerAnwer.addEventListener('click', handleClick)
+categoryBtn.addEventListener('click', render)
 
 /*-------------------------------- Functions --------------------------------*/
 
@@ -59,6 +61,7 @@ function render(e) {
   scoreDisplay.style.visibility = "visible"
   categoryBox.style.display = "none"
   gameContainer.style.display = "flex"
+  category = e.target.textContent
   categoryMsg.textContent = `${e.target.textContent.toUpperCase()}`
   renderQuestion()
   timer
@@ -66,17 +69,19 @@ function render(e) {
 
 function renderQuestion() {
   scoreDisplay.textContent = `SCORE ${score}`
-  for (let el of categories) {
-    if (el === "Movies") {
-      let currQuestion = getRandomMovieQuestion()
-      questionDisplay.textContent = currQuestion.question
-      for (let i = 0; i < arrOptions.length; i++) {
-        arrOptions[i].textContent = currQuestion.options[i]
-      }
-      return correctAnswer = currQuestion.answer
+  if(category === "Movies") {
+      currQuestion = getRandomMovieQuestion()
+    } else if(category === "Animals") {
+      currQuestion = getRandomAnimalQuestion()
     }
-  }
-}
+    
+    questionDisplay.textContent = currQuestion.question
+    for (let i = 0; i < arrOptions.length; i++) {
+      arrOptions[i].textContent = currQuestion.options[i]
+    }
+    return correctAnswer = currQuestion.answer
+  } 
+
 
 function handleClick(e) {
   const currAttribute = e.target.getAttribute('class')

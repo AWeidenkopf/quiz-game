@@ -309,16 +309,11 @@ const category = {
 
 function getRandomMovieQuestion() {
   return category.movies[Math.floor(Math.random() * category.movies.length)]
-  //   let arr = []
+}
 
-
-  //   let newArr = arr.reduce((acc, curr) => {
-  //   if(acc !== newArr){
-  //     newArr.push(curr)
-  //     return currQuestion
-  //   } getRandomMovieQuestion()
-  // }, currQuestion)
+function getRandomAnimalQuestion() {
+  return category.animals[Math.floor(Math.random() * category.movies.length)]
 }
 export {
-  getRandomMovieQuestion
+  getRandomMovieQuestion, getRandomAnimalQuestion
 }
