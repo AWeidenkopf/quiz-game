@@ -47,7 +47,6 @@ function init() {
 
 
 function render(e) {
-  scoreDisplay.textContent = `SCORE ${score}`
   categoryMsg.style.visibility = "visible"
   resetBtn.style.visibility = "visible"
   scoreDisplay.style.visibility = "visible"
@@ -58,6 +57,7 @@ function render(e) {
 }
 
 function renderQuestion() {
+  scoreDisplay.textContent = `SCORE ${score}`
   for (let el of categories) {
     if (el === "Movies") {
       let currQuestion = getRandomMovieQuestion()
@@ -74,6 +74,7 @@ function handleClick(e) {
   const currAttribute = e.target.getAttribute('class')
   if (e.target.textContent === correctAnswer) {
     e.target.setAttribute('class', currAttribute + ' correct animate__animated animate__flash')
+    score += 100
   } else {
     e.target.setAttribute('class', currAttribute + ' wrong animate__animated animate__jello')
   }
