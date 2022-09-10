@@ -6,7 +6,7 @@ const categories = ["Movies", "Animals", "Food", "Computer"]
 
 /*-------------------------------- Variables --------------------------------*/
 
-let winner, correctAnswer, score
+let winner, correctAnswer, score, seconds
 
 /*------------------------ Cached Element References ------------------------*/
 // Buttons
@@ -23,6 +23,7 @@ const questionDisplay = document.getElementById("question-box")
 const arrOptions = Array.from(document.querySelectorAll(".option"))
 const scoreDisplay = document.getElementById("score")
 const playerAnwer = document.getElementById("quiz-container")
+const timeDisplay =document.getElementById("timer")
 
 
 /*----------------------------- Event Listeners -----------------------------*/
@@ -54,6 +55,7 @@ function render(e) {
   gameContainer.style.display = "flex"
   categoryMsg.textContent = `${e.target.textContent.toUpperCase()}`
   renderQuestion()
+  timer()
 }
 
 function renderQuestion() {
@@ -95,4 +97,24 @@ function clearClass() {
     arrOptions[i].setAttribute('class', newClass)
   }
   renderQuestion()
+}
+
+
+function timer() {
+  seconds = 60
+
+  setInterval(tick, 1000)
+}
+
+function tick() {
+  if(seconds > 0) seconds--
+
+  renderTime()
+}
+function renderTime() {
+  let sec = seconds 
+
+  if(sec < 10) {
+    timeDisplay.textContent = ` 0${sec}`
+  } timeDisplay.textContent = `${sec}`
 }
