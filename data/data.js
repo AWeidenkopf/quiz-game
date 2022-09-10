@@ -15,141 +15,141 @@ const category = {
       answer: "Vin Diesel",
       options: ["Vin Diesel", "Tom Cruise", "Johnny Depp", "Will Smith"]
     },
-    {
-      question: "In what year was the movie “Grease” released?",
-      answer: "1978",
-      options: ["1980", "1975", "1970", "1978"]
-    },
-    {
-      question: "In what year was the original “Jurassic Park” film released?",
-      answer: "1993",
-      options: ["1990", "1985", "1993", "1989"]
-    },
-    {
-      question: "When adjusted for inflation, which is the highest grossing film of all time?",
-      answer: "Gone with the wind",
-      options: ["Casablanca", "Gone with the wind", "Ben-Hur", "Titanic"]
-    },
-    {
-      question: "In movies, a clue or piece of information which is intended to be misleading, is known as what?",
-      answer: "Red Herring",
-      options: ["Red Herring", "Trick", "Bluff", "Ploy"]
-    },
-    {
-      question:"What was the name of the 1999 American found footage horror film about three student filmmakers that disappeared in the woods?",
-      answer: "The Blair Witch Project",
-      options: ["The Woods", "The Last Exorcism", "Cloverfield", "The Blair Witch Project"]
-    },
-    {
-      question:"Which Teenage Mutant Ninja Turtle always wears red bandanas?",
-      answer: "Raphael",
-      options: ["Michelangelo","Leonardo","Donatello","Raphael"]
-    },
-    {
-      question:"What did the famous Hollywood sign, located in Los Angeles, originally say?",
-      answer: "Hollywoodland",
-      options: ["Hollywoodland", "Fantasyland", "Dreamland", "Utopia"]
-    },
-    {
-      question:"In the 1986 blockbuster “Top Gun” which actress played Goose’s wife?",
-      answer: "Meg Ryan",
-      options: ["Winona Ryder","Meg Ryan","Michelle Pfeiffer", "Julianne Moore"]
-    },
-    {
-      question:"Who directed the movie “Reservoir Dogs”?",
-      answer: "Quentin Tarantino",
-      options: ["David Fincher","Spike Lee","Quentin Tarantino", "Martin Scorsese"]
-    },
-    {
-      question: "Who played the fictional anti hero Deadpool in the 2016 movie?",
-      answer: "Ryan Reynolds",
-      options: ["Chris Evans","Ryan Reynolds", "Tom Hardy", "John Krasinski"]
-    },
-    {
-      question:"Who was the female lead in the movie “Titanic”?",
-      answer: "Kate Winslet",
-      options: ["Kate Winslet", "Nicole Kidman", "Angelina Jolie", "Sandra Bullock"]
-    },
-    {
-      question:"Who played Dracula in the 1931 vampire-horror film “Dracula”?",
-      answer: "Bela Lugosi",
-      options: ["Bela Lugosi", "Ed Wood", "Boris Karloff", "Tod Browning"]
-    },
-    {
-      question:"The original Ghostbusters movie was released in June of what year?",
-      answer: "1984",
-      options: ["1984","1985","1986","1987"]
-    },
-    {
-      question:"Tom Hanks played “Captain Miller” in what legendary World War II movie?",
-      answer: "Saving Private Ryan",
-      options: ["Days of Glory", "Stalingrad", "Saving Private Ryan", "Paratroop Command"]
-    },
-    {
-      question:"Robin Williams won an Academy Award for best supporting actor in which 1997 film?",
-      answer: "Good Will Hunting",
-      options: ["Dead Poets Society", "Jakob the Liar", "Awakenings", "Good Will Hunting"] 
-    },
-    {
-      question:"Who played the female lead role in the 1986 sci-fi movie “Aliens”?",
-      answer: "Sigourney Weaver",
-      options: ["Sigourney Weaver", "Olivia Newton-John", "Farrah Fawcett", "Barbra Streisand"]
-    },
-    {
-      question:"What is Michael J. Fox’s middle name?",
-      answer: "Andrew",
-      options: ["Matthew", "Andrew", "Joshua", "Anthony"]
-    },
-    {
-      question:"In what year was Alfred Hitchcock’s psychological thriller “Psycho” released?",
-      answer: "1960",
-      options: ["1965", "1960", "1970", "1968"]
-    },
-    {
-      question:"What is the name of the 1978 movie, about an American college student who is sent to a Turkish prison for attempting to smuggle hashish out of Turkey?",
-      answer: "Midnight Express",
-      options: ["Brokedown Palace", "Midnight Express", "American Made", "Wings of Danger"]
-    },
-    {
-      question:"In which 1993 thriller does the protagonist violently lose his cool when a fast food restaurant will not let him order from the breakfast menu?",
-      answer:"Falling Down",
-      options: ["Falling Down", "Pulp Fiction", "Die Hard", "Jackie Brown"]
-    },
-    {
-      question:"Which actress played identical twins in the 1998 movie remake of The Parent Trap?",
-      answer:"Lindsay Lohan",
-      options: ["Demi Lovato", "Anne Hathaway", "Elizabeth Olsen", "Lindsay Lohan"]
-    },
-    {
-      question:"In the movie “The Wizard of Oz”, what did the Scarecrow want from the wizard?",
-      answer:"A brain",
-      options: ["A heart", "A brain", "Courage", "Freedom"]
-    },
-    {
-      question:"The first movie of the Fast and Furious franchise was released in what year?",
-      answer: "2001",
-      options: ["1996", "1998", "2001", "2003"]
-    },
-    {
-      question:"Tyler Durden is a ficitional character appearing as the central protagonist and antagonist in what 1999 American film?",
-      answer: "Fight Club",
-      options: ["The Game", "Memento", "Fight Club", "Zodiac"]
-    },
-    {
-      question:"Who played the female lead in the 1942 film Casablanca?",
-      answer: "Ingrid Bergman",
-      options: ["Grace Kelly", "Elizabeth Taylor", "Ingrid Bergman", "Debbie Reynolds"]
-    },
-    {
-      question:"Actress Gal Gadot starred in what American superhero film released in the summer of 2017?",
-      answer: "Wonder Woman",
-      options: ["Wonder Woman", "Black Widow", "Nebula", "Scarlet Witch"]
-    },
-    {
-      question:"Who played the female lead in the 1990 romantic comedy Pretty Woman?",
-      answer: "Julia Roberts",
-      options: ["Jodie Foster", "Jeniffer Aniston","Sandra Bullock", "Julia Roberts"]
-    }
+    // {
+    //   question: "In what year was the movie “Grease” released?",
+    //   answer: "1978",
+    //   options: ["1980", "1975", "1970", "1978"]
+    // },
+    // {
+    //   question: "In what year was the original “Jurassic Park” film released?",
+    //   answer: "1993",
+    //   options: ["1990", "1985", "1993", "1989"]
+    // },
+    // {
+    //   question: "When adjusted for inflation, which is the highest grossing film of all time?",
+    //   answer: "Gone with the wind",
+    //   options: ["Casablanca", "Gone with the wind", "Ben-Hur", "Titanic"]
+    // },
+    // {
+    //   question: "In movies, a clue or piece of information which is intended to be misleading, is known as what?",
+    //   answer: "Red Herring",
+    //   options: ["Red Herring", "Trick", "Bluff", "Ploy"]
+    // },
+    // {
+    //   question:"What was the name of the 1999 American found footage horror film about three student filmmakers that disappeared in the woods?",
+    //   answer: "The Blair Witch Project",
+    //   options: ["The Woods", "The Last Exorcism", "Cloverfield", "The Blair Witch Project"]
+    // },
+    // {
+    //   question:"Which Teenage Mutant Ninja Turtle always wears red bandanas?",
+    //   answer: "Raphael",
+    //   options: ["Michelangelo","Leonardo","Donatello","Raphael"]
+    // },
+    // {
+    //   question:"What did the famous Hollywood sign, located in Los Angeles, originally say?",
+    //   answer: "Hollywoodland",
+    //   options: ["Hollywoodland", "Fantasyland", "Dreamland", "Utopia"]
+    // },
+    // {
+    //   question:"In the 1986 blockbuster “Top Gun” which actress played Goose’s wife?",
+    //   answer: "Meg Ryan",
+    //   options: ["Winona Ryder","Meg Ryan","Michelle Pfeiffer", "Julianne Moore"]
+    // },
+    // {
+    //   question:"Who directed the movie “Reservoir Dogs”?",
+    //   answer: "Quentin Tarantino",
+    //   options: ["David Fincher","Spike Lee","Quentin Tarantino", "Martin Scorsese"]
+    // },
+    // {
+    //   question: "Who played the fictional anti hero Deadpool in the 2016 movie?",
+    //   answer: "Ryan Reynolds",
+    //   options: ["Chris Evans","Ryan Reynolds", "Tom Hardy", "John Krasinski"]
+    // },
+    // {
+    //   question:"Who was the female lead in the movie “Titanic”?",
+    //   answer: "Kate Winslet",
+    //   options: ["Kate Winslet", "Nicole Kidman", "Angelina Jolie", "Sandra Bullock"]
+    // },
+    // {
+    //   question:"Who played Dracula in the 1931 vampire-horror film “Dracula”?",
+    //   answer: "Bela Lugosi",
+    //   options: ["Bela Lugosi", "Ed Wood", "Boris Karloff", "Tod Browning"]
+    // },
+    // {
+    //   question:"The original Ghostbusters movie was released in June of what year?",
+    //   answer: "1984",
+    //   options: ["1984","1985","1986","1987"]
+    // },
+    // {
+    //   question:"Tom Hanks played “Captain Miller” in what legendary World War II movie?",
+    //   answer: "Saving Private Ryan",
+    //   options: ["Days of Glory", "Stalingrad", "Saving Private Ryan", "Paratroop Command"]
+    // },
+    // {
+    //   question:"Robin Williams won an Academy Award for best supporting actor in which 1997 film?",
+    //   answer: "Good Will Hunting",
+    //   options: ["Dead Poets Society", "Jakob the Liar", "Awakenings", "Good Will Hunting"] 
+    // },
+    // {
+    //   question:"Who played the female lead role in the 1986 sci-fi movie “Aliens”?",
+    //   answer: "Sigourney Weaver",
+    //   options: ["Sigourney Weaver", "Olivia Newton-John", "Farrah Fawcett", "Barbra Streisand"]
+    // },
+    // {
+    //   question:"What is Michael J. Fox’s middle name?",
+    //   answer: "Andrew",
+    //   options: ["Matthew", "Andrew", "Joshua", "Anthony"]
+    // },
+    // {
+    //   question:"In what year was Alfred Hitchcock’s psychological thriller “Psycho” released?",
+    //   answer: "1960",
+    //   options: ["1965", "1960", "1970", "1968"]
+    // },
+    // {
+    //   question:"What is the name of the 1978 movie, about an American college student who is sent to a Turkish prison for attempting to smuggle hashish out of Turkey?",
+    //   answer: "Midnight Express",
+    //   options: ["Brokedown Palace", "Midnight Express", "American Made", "Wings of Danger"]
+    // },
+    // {
+    //   question:"In which 1993 thriller does the protagonist violently lose his cool when a fast food restaurant will not let him order from the breakfast menu?",
+    //   answer:"Falling Down",
+    //   options: ["Falling Down", "Pulp Fiction", "Die Hard", "Jackie Brown"]
+    // },
+    // {
+    //   question:"Which actress played identical twins in the 1998 movie remake of The Parent Trap?",
+    //   answer:"Lindsay Lohan",
+    //   options: ["Demi Lovato", "Anne Hathaway", "Elizabeth Olsen", "Lindsay Lohan"]
+    // },
+    // {
+    //   question:"In the movie “The Wizard of Oz”, what did the Scarecrow want from the wizard?",
+    //   answer:"A brain",
+    //   options: ["A heart", "A brain", "Courage", "Freedom"]
+    // },
+    // {
+    //   question:"The first movie of the Fast and Furious franchise was released in what year?",
+    //   answer: "2001",
+    //   options: ["1996", "1998", "2001", "2003"]
+    // },
+    // {
+    //   question:"Tyler Durden is a ficitional character appearing as the central protagonist and antagonist in what 1999 American film?",
+    //   answer: "Fight Club",
+    //   options: ["The Game", "Memento", "Fight Club", "Zodiac"]
+    // },
+    // {
+    //   question:"Who played the female lead in the 1942 film Casablanca?",
+    //   answer: "Ingrid Bergman",
+    //   options: ["Grace Kelly", "Elizabeth Taylor", "Ingrid Bergman", "Debbie Reynolds"]
+    // },
+    // {
+    //   question:"Actress Gal Gadot starred in what American superhero film released in the summer of 2017?",
+    //   answer: "Wonder Woman",
+    //   options: ["Wonder Woman", "Black Widow", "Nebula", "Scarlet Witch"]
+    // },
+    // {
+    //   question:"Who played the female lead in the 1990 romantic comedy Pretty Woman?",
+    //   answer: "Julia Roberts",
+    //   options: ["Jodie Foster", "Jeniffer Aniston","Sandra Bullock", "Julia Roberts"]
+    // }
   ],
   animals: [
     {

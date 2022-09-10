@@ -6,7 +6,7 @@ const categories = ["Movies", "Animals", "Food", "Computer"]
 
 /*-------------------------------- Variables --------------------------------*/
 
-let winner, category, currQuestion, correctAnswer, score, seconds, correctChoices, questionsCount
+let winner, category, currQuestion, allQuestions, correctAnswer, score, seconds, correctChoices, questionsCount
 
 /*------------------------ Cached Element References ------------------------*/
 // Buttons
@@ -47,6 +47,7 @@ function init() {
   score = 0
   correctChoices = 0
   questionsCount = 0
+  allQuestions = []
   categoryMsg.style.visibility = "hidden"
   resetBtn.style.visibility = "hidden"
   scoreDisplay.style.visibility = "hidden"
@@ -74,7 +75,17 @@ function renderQuestion() {
     } else if(category === "Animals") {
       currQuestion = getRandomAnimalQuestion()
     }
-    
+
+    if(allQuestions.length === 3){
+      return getWinner()
+    }
+
+    if(!allQuestions.includes(currQuestion)) {
+    allQuestions.push(currQuestion)
+    } else {
+      renderQuestion()
+    }
+
     questionDisplay.textContent = currQuestion.question
     for (let i = 0; i < arrOptions.length; i++) {
       arrOptions[i].textContent = currQuestion.options[i]
@@ -129,7 +140,7 @@ let timer = setInterval(function() {
 
 function getWinner() {
 
-  if(correctChoices > 3) {
+  if(correctChoices > 2) {
     winner = true
   } else {
     winner = false
@@ -140,7 +151,8 @@ function getWinner() {
 function renderWinner() {
   if(winner === true) {
     console.log('congrats! you won!')
-  } else {
+    clearInterval(timer)
+  } else if(winner === false){
     console.log('Woops! Thta was bad!')
 }
 }
