@@ -6,7 +6,7 @@ const categories = ["Movies", "Animals", "Food", "Computer"]
 
 /*-------------------------------- Variables --------------------------------*/
 
-let winner, correctAnswer, score, seconds
+let winner, correctAnswer, score, seconds, correctChoices
 
 /*------------------------ Cached Element References ------------------------*/
 // Buttons
@@ -39,6 +39,7 @@ init()
 function init() {
   winner = null
   score = 0
+  correctChoices = 0
   categoryMsg.style.visibility = "hidden"
   resetBtn.style.visibility = "hidden"
   scoreDisplay.style.visibility = "hidden"
@@ -55,7 +56,7 @@ function render(e) {
   gameContainer.style.display = "flex"
   categoryMsg.textContent = `${e.target.textContent.toUpperCase()}`
   renderQuestion()
-  timer()
+  timer
 }
 
 function renderQuestion() {
@@ -77,11 +78,12 @@ function handleClick(e) {
   if (e.target.textContent === correctAnswer) {
     e.target.setAttribute('class', currAttribute + ' correct animate__animated animate__flash')
     score += 100
+    correctChoices += 1
   } else {
     e.target.setAttribute('class', currAttribute + ' wrong animate__animated animate__jello')
   }
   setTimeout(clearClass, 1500)
-
+console.log(correctChoices)
 }
 
 
@@ -100,21 +102,34 @@ function clearClass() {
 }
 
 
-function timer() {
-  seconds = 60
+seconds = 30
+let timer = setInterval(function() {
+    seconds--
+  if(seconds < 10) {
+    timeDisplay.textContent = `0${seconds}`
+  } else if(seconds > 10){
+  timeDisplay.textContent = `${seconds}`
+  }if(seconds === 0) { 
+    clearInterval(timer)
+    getWinner()
+  }
 
-  setInterval(tick, 1000)
+}, 1000)
+
+function getWinner() {
+
+  if(correctChoices > 3) {
+    winner = true
+  } else {
+    winner = false
+  } 
+  renderWinner()
 }
 
-function tick() {
-  if(seconds > 0) seconds--
-
-  renderTime()
+function renderWinner() {
+  if(winner === true) {
+    console.log('congrats! you won!')
+  } else {
+    console.log('Woops! Thta was bad!')
 }
-function renderTime() {
-  let sec = seconds 
-
-  if(sec < 10) {
-    timeDisplay.textContent = ` 0${sec}`
-  } timeDisplay.textContent = `${sec}`
 }
