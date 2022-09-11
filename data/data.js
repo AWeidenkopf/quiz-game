@@ -455,7 +455,158 @@ const category = {
       options: ["1972", "1982", "1992", "2002"],
     }
   ],
-  sports: []
+  sports: [
+    {
+      question:"In what year was the first modern Olympic Games held?",
+      answer:"1896",
+      options: ["1896", "1900", "1923", "1945"]
+    },
+    {
+      question:"Which athlete has won the most Olympic medals?",
+      answer:"Michael Phelps",
+      options: ["Larisa Latynina", "Marit Bjorgen", "Michael Phelps", "Nikolai Andrianov"]
+    },
+    {
+      question:"In which sport does the bowler deliver the ball to the batsman?",
+      answer:"Cricket",
+      options: ["Baseball", "Cricket", "Punchball", "Kickball"]
+    },
+    {
+      question:"In what country did table tennis originate?",
+      answer:"England",
+      options: ["England", "Korea", "Irland", "Australia"]
+    },
+    {
+      question:"Where did the sport of curling originate?",
+      answer:"Scotland",
+      options: ["England", "Scotland", "Irland", "Germany"]
+    },
+    {
+      question:"The Walker Law passed in 1920 in New York was a law regulating which sport?",
+      answer:"Boxing",
+      options: ["Football", "Boxing", "Tennis", "Soccer"]
+    },
+    {
+      question:"The Grand Slam tournaments are the four most import annual events in which two sports?",
+      answer:"Tennis & Golf",
+      options: ["Golf & Cricket", "Tennis & Golf", "Tennis & Cricket", "Cricket & Chess"]
+    },
+    {
+      question:"Shaquille Rashaun O’Neal retired in 2011 from what sport?",
+      answer:"Basketball",
+      options: ["Baseball", "Basketball", "Football", "Tennis"]
+    },
+    {
+      question:"The Kangaroo Hoppet is a long distance cross-country skiing race that is held in which county?",
+      answer:"Australia",
+      options: ["New Zeland", "Taiwan", "Australia", "Indonesia"]
+    },
+    {
+      question:"Which five-times Grand Slam tennis champion tested positive for a banned substance at the 2016 Australian Open?",
+      answer:"Maria Sharapova",
+      options: ["Maria Sharapova", "Caroline Wozniacki", "Alexander Gilkes", "Rafael Nadal"]
+    },
+    {
+      question:"What is the highest score possible in 10 pin bowling?",
+      answer:"300",
+      options: ["300", "400", "500", "600"]
+    },
+    {
+      question:"What sport does Cristiano Ronaldo play?",
+      answer:"Soccer",
+      options: ["Tennis", "Soccer", "Football", "Baseball"]
+    },
+    {
+      question:"The Stanley Cup is a championship trophy awarded annually to the playoff winner in what sport?",
+      answer:"Hockey",
+      options: ["Ski", "Hockey", "Ice Skating", "Bobsleigh"]
+    },
+    {
+      question:"What country was host to the 1930 inaugural FIFA Football World Cup?",
+      answer:"Uruguay",
+      options: ["Brazil", "Uruguay", "Italy", "China"]
+    },
+    {
+      question:"Which tennis player has won the most men’s Grand Slam titles?",
+      answer:"Roger Federer",
+      options: ["Rafael Nadal", "Roger Federer", "Pete Sampras", "Novak Djokovic"]
+    },
+    {
+      question:"What is professional wrestler John Cena’s famous catchphrase?",
+      answer:"You can’t see me!",
+      options: ["Come get me!", "F* you!", "You can’t see me!", "Peekaboo!"]
+    },
+    {
+      question:"Anthony Jerome “Spud” Webb retired from what professional sport in 1997?",
+      answer:"Basketball",
+      options: ["Baseball", "Soccer", "Basketball", "Golf"]
+    },
+    {
+      question:"The Heisman Memorial Trophy is awarded annually to the most outstanding player in which college sport?",
+      answer:"Football",
+      options: ["Hockey", "Football", "Cricket", "Chess"]
+    },
+    {
+      question:"“Game, set, match” is an expression used to indicate a competitor has won the game in which sport?",
+      answer:"Tennis",
+      options: ["Golf", "Cricket", "Chess", "Tennis"]
+    },
+    {
+      question:"In boxing, what is the term for an illegal punch to the back of the head or base of the skull?",
+      answer:"Rabbit Punch",
+      options: ["Squirrel Punch", "The No-No Punch", "Rabbit Punch", "Hare Punch"]
+    },
+    {
+      question:"In 2012, Magic Johnson became part owner of which Major League Baseball team?",
+      answer:"Los Angeles Dodgers",
+      options: ["New York Mets", "Los Angeles Dodgers", "Toronto Blue Jays", "Los Angeles Angels"]
+    },
+    {
+      question:"MMA is the acronym for what full-contact combat sport?",
+      answer:"Mixed Martial Arts",
+      options: ["Mixed Martial Arts", "Motal Martial Arts", "Maximum Martial Arts", "Most Martial Arts"]
+    },
+    {
+      question:"Which water sport is the official state individual sport of Hawaii?",
+      answer:"Surfing",
+      options: ["Kayak Surfing", "Snorkeling", "Surfing", "Underwater Scooter"]
+    },
+    {
+      question:"What is the name of both the championship game of the Canadian Football League and the trophy awarded to the victorious team?",
+      answer:"The Grey Cup",
+      options: ["The Golden Cup", "The Grey Cup", "The Pink Cup", "The Red Cup"]
+    },
+    {
+      question:"A. J. Foyt was the first race car driver to win what race four times?",
+      answer:"The Indianapolis 500",
+      options: ["Formula 1", "The Indianapolis 500", "IndyCar", "Formula GM Lotus"]
+    },
+    {
+      question:"St. Augustine Florida is the home to the hall of fame for what sport?",
+      answer:"Golf",
+      options: ["Tennis", "Soccer", "Golf", "Baseball"]
+    },
+    {
+      question:"Indianapolis 500 winners traditionally celebrate by drinking what?",
+      answer:"Milk",
+      options: ["Champagne", "Milk", "Coca-Cola", "Red Wine"]
+    },
+    {
+      question:"Handsome Dan is a bulldog who serves as the mascot of which university’s sports teams?",
+      answer:"Yale University",
+      options: ["Harvard University", "MIT", "Yale University", "Georgia Tech"]
+    },
+    {
+      question:"How many soccer players should be on the field at the same time?",
+      answer:"22",
+      options: ["18", "20", "22", "24"]
+    },
+    {
+      question:"Where is the baseball hall of fame located?",
+      answer:"New York",
+      options: ["California", "Texas", "New York", "Florida"]
+    }
+  ]
 }
 
 function getRandomMovieQuestion() {
