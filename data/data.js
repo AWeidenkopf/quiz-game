@@ -15,141 +15,141 @@ const category = {
       answer: "Vin Diesel",
       options: ["Vin Diesel", "Tom Cruise", "Johnny Depp", "Will Smith"]
     },
-    // {
-    //   question: "In what year was the movie “Grease” released?",
-    //   answer: "1978",
-    //   options: ["1980", "1975", "1970", "1978"]
-    // },
-    // {
-    //   question: "In what year was the original “Jurassic Park” film released?",
-    //   answer: "1993",
-    //   options: ["1990", "1985", "1993", "1989"]
-    // },
-    // {
-    //   question: "When adjusted for inflation, which is the highest grossing film of all time?",
-    //   answer: "Gone with the wind",
-    //   options: ["Casablanca", "Gone with the wind", "Ben-Hur", "Titanic"]
-    // },
-    // {
-    //   question: "In movies, a clue or piece of information which is intended to be misleading, is known as what?",
-    //   answer: "Red Herring",
-    //   options: ["Red Herring", "Trick", "Bluff", "Ploy"]
-    // },
-    // {
-    //   question:"What was the name of the 1999 American found footage horror film about three student filmmakers that disappeared in the woods?",
-    //   answer: "The Blair Witch Project",
-    //   options: ["The Woods", "The Last Exorcism", "Cloverfield", "The Blair Witch Project"]
-    // },
-    // {
-    //   question:"Which Teenage Mutant Ninja Turtle always wears red bandanas?",
-    //   answer: "Raphael",
-    //   options: ["Michelangelo","Leonardo","Donatello","Raphael"]
-    // },
-    // {
-    //   question:"What did the famous Hollywood sign, located in Los Angeles, originally say?",
-    //   answer: "Hollywoodland",
-    //   options: ["Hollywoodland", "Fantasyland", "Dreamland", "Utopia"]
-    // },
-    // {
-    //   question:"In the 1986 blockbuster “Top Gun” which actress played Goose’s wife?",
-    //   answer: "Meg Ryan",
-    //   options: ["Winona Ryder","Meg Ryan","Michelle Pfeiffer", "Julianne Moore"]
-    // },
-    // {
-    //   question:"Who directed the movie “Reservoir Dogs”?",
-    //   answer: "Quentin Tarantino",
-    //   options: ["David Fincher","Spike Lee","Quentin Tarantino", "Martin Scorsese"]
-    // },
-    // {
-    //   question: "Who played the fictional anti hero Deadpool in the 2016 movie?",
-    //   answer: "Ryan Reynolds",
-    //   options: ["Chris Evans","Ryan Reynolds", "Tom Hardy", "John Krasinski"]
-    // },
-    // {
-    //   question:"Who was the female lead in the movie “Titanic”?",
-    //   answer: "Kate Winslet",
-    //   options: ["Kate Winslet", "Nicole Kidman", "Angelina Jolie", "Sandra Bullock"]
-    // },
-    // {
-    //   question:"Who played Dracula in the 1931 vampire-horror film “Dracula”?",
-    //   answer: "Bela Lugosi",
-    //   options: ["Bela Lugosi", "Ed Wood", "Boris Karloff", "Tod Browning"]
-    // },
-    // {
-    //   question:"The original Ghostbusters movie was released in June of what year?",
-    //   answer: "1984",
-    //   options: ["1984","1985","1986","1987"]
-    // },
-    // {
-    //   question:"Tom Hanks played “Captain Miller” in what legendary World War II movie?",
-    //   answer: "Saving Private Ryan",
-    //   options: ["Days of Glory", "Stalingrad", "Saving Private Ryan", "Paratroop Command"]
-    // },
-    // {
-    //   question:"Robin Williams won an Academy Award for best supporting actor in which 1997 film?",
-    //   answer: "Good Will Hunting",
-    //   options: ["Dead Poets Society", "Jakob the Liar", "Awakenings", "Good Will Hunting"] 
-    // },
-    // {
-    //   question:"Who played the female lead role in the 1986 sci-fi movie “Aliens”?",
-    //   answer: "Sigourney Weaver",
-    //   options: ["Sigourney Weaver", "Olivia Newton-John", "Farrah Fawcett", "Barbra Streisand"]
-    // },
-    // {
-    //   question:"What is Michael J. Fox’s middle name?",
-    //   answer: "Andrew",
-    //   options: ["Matthew", "Andrew", "Joshua", "Anthony"]
-    // },
-    // {
-    //   question:"In what year was Alfred Hitchcock’s psychological thriller “Psycho” released?",
-    //   answer: "1960",
-    //   options: ["1965", "1960", "1970", "1968"]
-    // },
-    // {
-    //   question:"What is the name of the 1978 movie, about an American college student who is sent to a Turkish prison for attempting to smuggle hashish out of Turkey?",
-    //   answer: "Midnight Express",
-    //   options: ["Brokedown Palace", "Midnight Express", "American Made", "Wings of Danger"]
-    // },
-    // {
-    //   question:"In which 1993 thriller does the protagonist violently lose his cool when a fast food restaurant will not let him order from the breakfast menu?",
-    //   answer:"Falling Down",
-    //   options: ["Falling Down", "Pulp Fiction", "Die Hard", "Jackie Brown"]
-    // },
-    // {
-    //   question:"Which actress played identical twins in the 1998 movie remake of The Parent Trap?",
-    //   answer:"Lindsay Lohan",
-    //   options: ["Demi Lovato", "Anne Hathaway", "Elizabeth Olsen", "Lindsay Lohan"]
-    // },
-    // {
-    //   question:"In the movie “The Wizard of Oz”, what did the Scarecrow want from the wizard?",
-    //   answer:"A brain",
-    //   options: ["A heart", "A brain", "Courage", "Freedom"]
-    // },
-    // {
-    //   question:"The first movie of the Fast and Furious franchise was released in what year?",
-    //   answer: "2001",
-    //   options: ["1996", "1998", "2001", "2003"]
-    // },
-    // {
-    //   question:"Tyler Durden is a ficitional character appearing as the central protagonist and antagonist in what 1999 American film?",
-    //   answer: "Fight Club",
-    //   options: ["The Game", "Memento", "Fight Club", "Zodiac"]
-    // },
-    // {
-    //   question:"Who played the female lead in the 1942 film Casablanca?",
-    //   answer: "Ingrid Bergman",
-    //   options: ["Grace Kelly", "Elizabeth Taylor", "Ingrid Bergman", "Debbie Reynolds"]
-    // },
-    // {
-    //   question:"Actress Gal Gadot starred in what American superhero film released in the summer of 2017?",
-    //   answer: "Wonder Woman",
-    //   options: ["Wonder Woman", "Black Widow", "Nebula", "Scarlet Witch"]
-    // },
-    // {
-    //   question:"Who played the female lead in the 1990 romantic comedy Pretty Woman?",
-    //   answer: "Julia Roberts",
-    //   options: ["Jodie Foster", "Jeniffer Aniston","Sandra Bullock", "Julia Roberts"]
-    // }
+    {
+      question: "In what year was the movie “Grease” released?",
+      answer: "1978",
+      options: ["1980", "1975", "1970", "1978"]
+    },
+    {
+      question: "In what year was the original “Jurassic Park” film released?",
+      answer: "1993",
+      options: ["1990", "1985", "1993", "1989"]
+    },
+    {
+      question: "When adjusted for inflation, which is the highest grossing film of all time?",
+      answer: "Gone with the wind",
+      options: ["Casablanca", "Gone with the wind", "Ben-Hur", "Titanic"]
+    },
+    {
+      question: "In movies, a clue or piece of information which is intended to be misleading, is known as what?",
+      answer: "Red Herring",
+      options: ["Red Herring", "Trick", "Bluff", "Ploy"]
+    },
+    {
+      question:"What was the name of the 1999 American found footage horror film about three student filmmakers that disappeared in the woods?",
+      answer: "The Blair Witch Project",
+      options: ["The Woods", "The Last Exorcism", "Cloverfield", "The Blair Witch Project"]
+    },
+    {
+      question:"Which Teenage Mutant Ninja Turtle always wears red bandanas?",
+      answer: "Raphael",
+      options: ["Michelangelo","Leonardo","Donatello","Raphael"]
+    },
+    {
+      question:"What did the famous Hollywood sign, located in Los Angeles, originally say?",
+      answer: "Hollywoodland",
+      options: ["Hollywoodland", "Fantasyland", "Dreamland", "Utopia"]
+    },
+    {
+      question:"In the 1986 blockbuster “Top Gun” which actress played Goose’s wife?",
+      answer: "Meg Ryan",
+      options: ["Winona Ryder","Meg Ryan","Michelle Pfeiffer", "Julianne Moore"]
+    },
+    {
+      question:"Who directed the movie “Reservoir Dogs”?",
+      answer: "Quentin Tarantino",
+      options: ["David Fincher","Spike Lee","Quentin Tarantino", "Martin Scorsese"]
+    },
+    {
+      question: "Who played the fictional anti hero Deadpool in the 2016 movie?",
+      answer: "Ryan Reynolds",
+      options: ["Chris Evans","Ryan Reynolds", "Tom Hardy", "John Krasinski"]
+    },
+    {
+      question:"Who was the female lead in the movie “Titanic”?",
+      answer: "Kate Winslet",
+      options: ["Kate Winslet", "Nicole Kidman", "Angelina Jolie", "Sandra Bullock"]
+    },
+    {
+      question:"Who played Dracula in the 1931 vampire-horror film “Dracula”?",
+      answer: "Bela Lugosi",
+      options: ["Bela Lugosi", "Ed Wood", "Boris Karloff", "Tod Browning"]
+    },
+    {
+      question:"The original Ghostbusters movie was released in June of what year?",
+      answer: "1984",
+      options: ["1984","1985","1986","1987"]
+    },
+    {
+      question:"Tom Hanks played “Captain Miller” in what legendary World War II movie?",
+      answer: "Saving Private Ryan",
+      options: ["Days of Glory", "Stalingrad", "Saving Private Ryan", "Paratroop Command"]
+    },
+    {
+      question:"Robin Williams won an Academy Award for best supporting actor in which 1997 film?",
+      answer: "Good Will Hunting",
+      options: ["Dead Poets Society", "Jakob the Liar", "Awakenings", "Good Will Hunting"] 
+    },
+    {
+      question:"Who played the female lead role in the 1986 sci-fi movie “Aliens”?",
+      answer: "Sigourney Weaver",
+      options: ["Sigourney Weaver", "Olivia Newton-John", "Farrah Fawcett", "Barbra Streisand"]
+    },
+    {
+      question:"What is Michael J. Fox’s middle name?",
+      answer: "Andrew",
+      options: ["Matthew", "Andrew", "Joshua", "Anthony"]
+    },
+    {
+      question:"In what year was Alfred Hitchcock’s psychological thriller “Psycho” released?",
+      answer: "1960",
+      options: ["1965", "1960", "1970", "1968"]
+    },
+    {
+      question:"What is the name of the 1978 movie, about an American college student who is sent to a Turkish prison for attempting to smuggle hashish out of Turkey?",
+      answer: "Midnight Express",
+      options: ["Brokedown Palace", "Midnight Express", "American Made", "Wings of Danger"]
+    },
+    {
+      question:"In which 1993 thriller does the protagonist violently lose his cool when a fast food restaurant will not let him order from the breakfast menu?",
+      answer:"Falling Down",
+      options: ["Falling Down", "Pulp Fiction", "Die Hard", "Jackie Brown"]
+    },
+    {
+      question:"Which actress played identical twins in the 1998 movie remake of The Parent Trap?",
+      answer:"Lindsay Lohan",
+      options: ["Demi Lovato", "Anne Hathaway", "Elizabeth Olsen", "Lindsay Lohan"]
+    },
+    {
+      question:"In the movie “The Wizard of Oz”, what did the Scarecrow want from the wizard?",
+      answer:"A brain",
+      options: ["A heart", "A brain", "Courage", "Freedom"]
+    },
+    {
+      question:"The first movie of the Fast and Furious franchise was released in what year?",
+      answer: "2001",
+      options: ["1996", "1998", "2001", "2003"]
+    },
+    {
+      question:"Tyler Durden is a ficitional character appearing as the central protagonist and antagonist in what 1999 American film?",
+      answer: "Fight Club",
+      options: ["The Game", "Memento", "Fight Club", "Zodiac"]
+    },
+    {
+      question:"Who played the female lead in the 1942 film Casablanca?",
+      answer: "Ingrid Bergman",
+      options: ["Grace Kelly", "Elizabeth Taylor", "Ingrid Bergman", "Debbie Reynolds"]
+    },
+    {
+      question:"Actress Gal Gadot starred in what American superhero film released in the summer of 2017?",
+      answer: "Wonder Woman",
+      options: ["Wonder Woman", "Black Widow", "Nebula", "Scarlet Witch"]
+    },
+    {
+      question:"Who played the female lead in the 1990 romantic comedy Pretty Woman?",
+      answer: "Julia Roberts",
+      options: ["Jodie Foster", "Jeniffer Aniston","Sandra Bullock", "Julia Roberts"]
+    }
   ],
   animals: [
     {
@@ -165,146 +165,297 @@ const category = {
     {
       question: "Su Lin was the name given to what type of animal captured in China and brought to the United States for the first time in 1936?",
       answer: "Giant Panda",
-      oprions: ["Koala", "Giant Panda", "Red Panda", "Amur Leopard"]
+      options: ["Koala", "Giant Panda", "Red Panda", "Amur Leopard"]
     },
     {
       question: "Which animal is the tallest in the world?",
       answer: "Giraffe",
-      oprions: ["Giraffe", "Elephant", "Ostrich", "Brown Bear"]
+      options: ["Giraffe", "Elephant", "Ostrich", "Brown Bear"]
     },
     {
       question: "What type of animal is known as the ship of the desert?",
       answer: "Camel",
-      oprions: ["Arabian Oryx", "Camel", "Desert Iguana", "Cougar"]
+      options: ["Arabian Oryx", "Camel", "Desert Iguana", "Cougar"]
     },
     {
       question: "On what continent would you not find bees?",
       answer: "Antarctica",
-      oprions: ["Australia", "Asia", "Antarctica", "Africa"]
+      options: ["Australia", "Asia", "Antarctica", "Africa"]
     },
     {
       question: "Which animal has the largest brain?",
       answer: "Sperm Whale",
-      oprions: ["Sperm Whale", "Octopus", "Grey Kangaroo", "Dolphin"]
+      options: ["Sperm Whale", "Octopus", "Grey Kangaroo", "Dolphin"]
     },
     {
       question: "Which animal has the longest gestation period?",
       answer: "Elephant",
-      oprions: ["Elephant", "Whale", "Rhinoceros", "Giraffe"]
+      options: ["Elephant", "Whale", "Rhinoceros", "Giraffe"]
     },
     {
       question: "An animal that lives part of its life on land and part in water is known as what?",
       answer: "Amphibian",
-      oprions: ["Mammal", "Amphibian", "Reptiles", "Insects"]
+      options: ["Mammal", "Amphibian", "Reptiles", "Insects"]
     },
     {
       question: "A koala’s diet consists mainly of what?",
       answer: "Eucalyptus leaves",
-      oprions: ["Eucalyptus leaves", "Fruits", "Urine", "Bamboo"]
+      options: ["Eucalyptus leaves", "Fruits", "Urine", "Bamboo"]
     },
     {
       question: "What animal has the fastest metabolism?",
       answer: "Hummingbird",
-      oprions: ["Pigeon", "Elephant", "Cow", "Hummingbird"]
+      options: ["Pigeon", "Elephant", "Cow", "Hummingbird"]
     },
     {
       question: "In the United States which breed of dog is commonly known as a firehouse dog?",
       answer: "Dalmatian",
-      oprions: ["German Shepherd", "Dalmatian", "Great Dane", "Beagle"]
+      options: ["German Shepherd", "Dalmatian", "Great Dane", "Beagle"]
     },
     {
       question: "How many chambers are there in a dog’s heart?",
       answer: "Four",
-      oprions: ["Two", "Four", "Nine", "Twelve"]
+      options: ["Two", "Four", "Nine", "Twelve"]
     },
     {
       question: "An octopus can fit through any hole larger than its what?",
       answer: "Beak",
-      oprions: ["Leg", "Beak", "Head", "Stomach"]
+      options: ["Leg", "Beak", "Head", "Stomach"]
     },
     {
       question: "Now extinct, what shark is thought to have been the largest ever on Earth?",
       answer: "Megalodon",
-      oprions: ["Megalodon", "Mega Whale", "Purple Shark", "African Black Elephant"]
+      options: ["Megalodon", "Mega Whale", "Purple Shark", "African Black Elephant"]
     },
     {
       question: "Snoopy from the comic peanuts is what breed of dog?",
       answer: "Beagle",
-      oprions: ["Dachshund", "Beagle", "Siberian Husky", "Labrador Retriever"]
+      options: ["Dachshund", "Beagle", "Siberian Husky", "Labrador Retriever"]
     },
     {
       question: "What was the name of Robert E. Lee’s most famous horse?",
       answer: "Traveller",
-      oprions: ["Traveller", "Silver", "Spirit", "Thunder"]
+      options: ["Traveller", "Silver", "Spirit", "Thunder"]
     },
     {
       question: "What is the fastest land snake in the world?",
       answer: "Black Mamba",
-      oprions: ["Sidewinder Snake", "Black Mamba", "Southern Black Racer", "Cottonmouth Viper"]
+      options: ["Sidewinder Snake", "Black Mamba", "Southern Black Racer", "Cottonmouth Viper"]
     },
     {
       question: "Which animal has the most legs?",
       answer: "Millipede",
-      oprions: ["Centipede", "Millipede", "Thousenpede", "Muitopede"]
+      options: ["Centipede", "Millipede", "Thousenpede", "Muitopede"]
     },
     {
       question: "What is the fastest fish in the Ocean?",
       answer: "Sailfish",
-      oprions: ["Black Marlin", "Swordfish", "Wahoo", "Sailfish"]
+      options: ["Black Marlin", "Swordfish", "Wahoo", "Sailfish"]
     },
     {
       question: "The Alaskan Malamute is a type of what?",
       answer: "Dog",
-      oprions: ["Dog", "Cat", "Goat", "Fish"]
+      options: ["Dog", "Cat", "Goat", "Fish"]
     },
     {
       question: "Polar bears feed mainly on what animal?",
       answer: "Seal",
-      oprions: ["Moose", "Deer", "Fish", "Seal"]
+      options: ["Moose", "Deer", "Fish", "Seal"]
     },
     {
       question: "What is the sleepiest animal in the world, sleeping around 22 hours each day?",
       answer: "Koala",
-      oprions: ["Cat", "Sloth", "Opossum", "Koala"]
+      options: ["Cat", "Sloth", "Opossum", "Koala"]
     },
     {
       question: "Which bird is often associated with delivering babies?",
       answer: "Stork",
-      oprions: ["Gull", "Stork", "Heron", "Pelican"]
+      options: ["Gull", "Stork", "Heron", "Pelican"]
     },
     {
       question: "How many hearts does an octopus have?",
       answer: "Three",
-      oprions: ["Three", "Four", "Five", "Six"]
+      options: ["Three", "Four", "Five", "Six"]
     },
     {
       question: "In the United States, where can alligators and crocodiles be found together in the wild?",
       answer: "Florida",
-      oprions: ["Texas", "Washington", "Hawaii", "Florida"]
+      options: ["Texas", "Washington", "Hawaii", "Florida"]
     },
     {
       question: "What is the national animal of Scotland?",
       answer: "Unicorn",
-      oprions: ["Dragon", "Unicorn", "Dragonfly", "Dinosaur"]
+      options: ["Dragon", "Unicorn", "Dragonfly", "Dinosaur"]
     },
     {
       question: "What animal has the largest ears?",
       answer: "Elephant",
-      oprions: ["Hare", "Elephant", "Bat", "Basset"]
+      options: ["Hare", "Elephant", "Bat", "Basset"]
     },
     {
       question: "The Chihuahua is a breed of dog believed to originate from what country?",
       answer: "Mexico",
-      oprions: ["Mexico", "Colombia", "Peru", "Costa Rica"]
+      options: ["Mexico", "Colombia", "Peru", "Costa Rica"]
     },
     {
       question: "Cynophobia is the fear of what kind of animal?",
       answer: "Dogs",
-      oprions: ["Cats", "Dogs", "Birds", "Rabbits"]
+      options: ["Cats", "Dogs", "Birds", "Rabbits"]
     }
   ],
-  sports: [],
-  food: []
+  food: [
+    {
+      question: "The United States state of Georgia is famous for what fruit?",
+      answer:"Peach",
+      options: ["Grape", "Peach", "Apple", "Orange"],
+    },
+    {
+      question:"What is the main ingredient in guacamole?",
+      answer:"Avocado",
+      options: ["Avocado", "Jalapeño", "Red Onion", "Lemon"],
+    },
+    {
+      question:"How many items are in a bakers dozen?",
+      answer:"13",
+      options: ["11", "12", "13", "14"],
+    },
+    {
+      question:"What popular beverage once contained cocaine?",
+      answer:"Coca-Cola",
+      options: ["Coca-Cola", "Brazilian Guarana", "Fanta", "Pepsi"],
+    },
+    {
+      question:"What is the name of the first pizzeria to open in the United States?",
+      answer:"Lombardi's Pizza",
+      options: ["Giuseppi's Pizza", "Antonio's Pizza", "Luigi's Pizza", "Lombardi's Pizza"],
+    },
+    {
+      question:"Bubble tea originated in which country?",
+      answer:"Taiwan",
+      options: ["China", "Taiwan", "Haiti", "Indonesia"],
+    },
+    {
+      question:"The desire to eat strange things that are non-nutritive is known as what?",
+      answer:"Pica",
+      options: ["Tica", "Cica", "Pica", "Mica"],
+    },
+    {
+      question:"In what year was the blue M&M first introduced?",
+      answer:"1995",
+      options: ["1993", "1994", "1995", "1996"],
+    },
+    {
+      question:"In the US, a pint of milk is equal to how many cups of milk?",
+      answer:"Two",
+      options: ["One", "Two", "Three", "Four"],
+    },
+    {
+      question:"Where was the fortune cookie invented?",
+      answer:"California",
+      options: ["California", "Colorado", "New Jersey", "Alaska"],
+    },
+    {
+      question:"Paella, a famous rice dish, originated in what country?",
+      answer:"Spain",
+      options: ["Italy", "Portugal", "Spain", "France"],
+    },
+    {
+      question:"Which liquor is made from the blue agave plant?",
+      answer:"Tequila",
+      options: ["Tequila", "Gin", "Cachaça", "Rum"],
+    },
+    {
+      question:"What ingredient in bread causes it to rise?",
+      answer:"Yeast",
+      options: ["Sugar", "Salt", "Water", "Yeast"],
+    },
+    {
+      question:"Gumbo is a stew that originated in which state?",
+      answer:"Louisiana",
+      options: ["Alabama", "Mississipi", "Louisiana", "Georgia"],
+    },
+    {
+      question:"What is the highest number of Michelin stars a restaurant can receive?",
+      answer:"Three",
+      options: ["Three", "Five", "Seven", "Ten"],
+    },
+    {
+      question:"Kopi luwak is a very expensive type of what?",
+      answer:"Coffee",
+      options: ["Tea", "Coffee", "Salt", "Pepper"],
+    },
+    {
+      question:"A tandoor is a type of what?",
+      answer:"Oven",
+      options: ["Bread", "Oven", "Spice", "Salsa"],
+    },
+    {
+      question:"A teetotaler is a person that never drinks what?",
+      answer:"Alcohol",
+      options: ["Water", "Alcohol", "Juice", "Tea"],
+    },
+    {
+      question:"What is a traditional fermented Korean side dish made seasoned vegetables and salt?",
+      answer:"Kimchi",
+      options: ["Rice Cake", "Kimchi", "Oi Muchim", "Gaji Namul"],
+    },
+    {
+      question:"Chimichurri is a green sauce that originated in what country?",
+      answer:"Argentina",
+      options: ["India", "Mexico", "Argentina", "Spain"],
+    },
+    {
+      question:"Pho is a popular noodle soup from what country?",
+      answer:"Vietnam",
+      options: ["Iraq", "Vietnam", "Cambodia", "Thailand"],
+    },
+    {
+      question:"n French cuisine, what is the name for the following: béchamel sauce, espagnole sauce, hollandaise sauce, tomato sauce, and velouté sauce?",
+      answer:"Mother Sauces",
+      options: ["Combo Sauces", "Mother Sauces", "The Sauces", "Honey Sauces"],
+    },
+    {
+      question:"In what type of restaurant would you typically find the condiment wasabi?",
+      answer:"Japanese",
+      options: ["Chinese", "Japanese", "Korean", "American"],
+    },
+    {
+      question:"The cooking technique that involves submerging food in a liquid at a relatively low temperature is called what?",
+      answer:"Poaching",
+      options: ["Deep Fry", "Poaching", "Bain-Marie", "Thaw"],
+    },
+    {
+      question:"What is the name for a confection that consists primarily of sugar or honey and almond meal?",
+      answer:"Marzipan",
+      options: ["Custard", "Marzipan", "Pastry cream", "Caramel"],
+    },
+    {
+      question:"Sauerkraut is made from what finely cut vegetable?",
+      answer:"Cabbage",
+      options: ["Onion", "Cabbage", "Brussels Sprout", "Radish"],
+    },
+    {
+      question:"What was the original flavor of the filling in Twinkies?",
+      answer:"Banana cream",
+      options: ["Chocolate cream", "Banana cream", "Strawberry cream", "Lemon cream"],
+    },
+    {
+      question:"Pupusas, handmade thick stuffed corn tortillas, are a traditional dish from what country?",
+      answer:"El Salvador",
+      options: ["Mexico", "Spain", "El Salvador", "Uruguay"],
+    },
+    {
+      question:"The use of chopsticks originated in what country?",
+      answer:"China",
+      options: ["Japan", "Korea", "China", "Taiwan"],
+    },
+    {
+      question:"In what year did McDonald’s start serving breakfast with the introduction of the Egg McMuffin?",
+      answer:"1972",
+      options: ["1972", "1982", "1992", "2002"],
+    }
+  ],
+  sports: []
 }
 
 function getRandomMovieQuestion() {
