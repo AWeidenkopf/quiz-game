@@ -614,8 +614,17 @@ function getRandomMovieQuestion() {
 }
 
 function getRandomAnimalQuestion() {
-  return category.animals[Math.floor(Math.random() * category.movies.length)]
+  return category.animals[Math.floor(Math.random() * category.animals.length)]
 }
+
+function getRandomFoodQuestion() {
+  return category.food[Math.floor(Math.random() * category.food.length)]
+}
+
+function getRandomSportQuestion() {
+  return category.sports[Math.floor(Math.random() * category.sports.length)]
+}
+
 export {
-  getRandomMovieQuestion, getRandomAnimalQuestion
+  getRandomAnimalQuestion, getRandomFoodQuestion, getRandomMovieQuestion, getRandomSportQuestion
 }

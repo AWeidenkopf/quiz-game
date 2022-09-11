@@ -1,22 +1,24 @@
-import { getRandomMovieQuestion, getRandomAnimalQuestion } from "../data/data.js";
+import {getRandomAnimalQuestion, getRandomFoodQuestion, getRandomSportQuestion, getRandomMovieQuestion} from "../data/data.js";
 
 /*-------------------------------- Constants --------------------------------*/
 
-const categories = ["Movies", "Animals", "Food", "Computer"]
+const categories = ["Movies", "Animals", "Food", "Sports"]
 
 /*-------------------------------- Variables --------------------------------*/
 
-let winner, category, currQuestion, allQuestions, correctAnswer, score, seconds, correctChoices, questionsCount
+let winner, category, idx, currQuestion, allQuestions, correctAnswer, score, seconds, correctChoices, questionsCount
 
 /*------------------------ Cached Element References ------------------------*/
 // Buttons
 const resetBtn = document.getElementById("reset")
+
 // const moviesBtn = document.getElementById("movies")
 const categoryBtn = document.getElementById("categoriesBtns")
 
 // Containers
 const gameContainer = document.getElementById("game")
 const categoryBox = document.getElementById("category-box")
+const winnerBox = document.getElementById("winner-box")
 
 // Text
 const categoryMsg = document.getElementById("category")
@@ -24,10 +26,11 @@ const questionDisplay = document.getElementById("question-box")
 const arrOptions = Array.from(document.querySelectorAll(".option"))
 const scoreDisplay = document.getElementById("score")
 const playerAnwer = document.getElementById("quiz-container")
-const timeDisplay =document.getElementById("timer")
+const timeDisplay = document.getElementById("timer")
+const displayWinner = document.getElementById("winner-text")
+const animatedText = document.querySelector(".text")
 
 //Progress bar
-
 const bar = document.querySelector(".progress")
 
 
@@ -48,11 +51,14 @@ function init() {
   correctChoices = 0
   questionsCount = 0
   allQuestions = []
+  seconds = 60
+  winnerBox.style.display = "none"
   categoryMsg.style.visibility = "hidden"
   resetBtn.style.visibility = "hidden"
   scoreDisplay.style.visibility = "hidden"
   gameContainer.style.display = "none"
   categoryBox.style.display = "inline-block"
+  bar.style.width = "0%"
 }
 
 
@@ -62,41 +68,61 @@ function render(e) {
   scoreDisplay.style.visibility = "visible"
   categoryBox.style.display = "none"
   gameContainer.style.display = "flex"
-  category = e.target.textContent
-  categoryMsg.textContent = `${e.target.textContent.toUpperCase()}`
-  renderQuestion()
+  if(e.target.textContent !== "Random") {
+    category = e.target.textContent
+    categoryMsg.textContent = `${e.target.textContent.toUpperCase()}`
+  } else {
+    idx = Math.floor(Math.random() * categories.length)
+    category = categories[idx]
+    console.log(category)
+    categoryMsg.textContent = `${category.toUpperCase()}`
+  }
+  const currAttribute = e.target.getAttribute('class')
+  if(currAttribute !== "quiz-container" ){
+    renderQuestion()
+  }
   timer
 }
 
 function renderQuestion() {
+  
   scoreDisplay.textContent = `SCORE ${score}`
   if(category === "Movies") {
-      currQuestion = getRandomMovieQuestion()
-    } else if(category === "Animals") {
-      currQuestion = getRandomAnimalQuestion()
-    }
-
-    if(allQuestions.length === 3){
-      return getWinner()
-    }
-
-    if(!allQuestions.includes(currQuestion)) {
-    allQuestions.push(currQuestion)
-    } else {
-      renderQuestion()
-    }
-
-    questionDisplay.textContent = currQuestion.question
-    for (let i = 0; i < arrOptions.length; i++) {
-      arrOptions[i].textContent = currQuestion.options[i]
-    }
-    return correctAnswer = currQuestion.answer
+    currQuestion = getRandomMovieQuestion()
+  } else if(category === "Animals") {
+    currQuestion = getRandomAnimalQuestion()
+  } else if(category === "Food") {
+    currQuestion = getRandomFoodQuestion()
+  } else {
+    currQuestion = getRandomSportQuestion()
   } 
+  
+  if(allQuestions.length === 10){
+    return getWinner()
+  }
+  
+  if(!allQuestions.includes(currQuestion)) {
+    allQuestions.push(currQuestion)
+  } else {
+    renderQuestion()
+  }
+  
+  questionDisplay.textContent = currQuestion.question
+  
+  for (let i = 0; i < arrOptions.length; i++) {
+    arrOptions[i].textContent = currQuestion.options[i]
+  }
+  
+  progressBar()
+  return correctAnswer = currQuestion.answer
+} 
+
+
 
 
 function handleClick(e) {
   const currAttribute = e.target.getAttribute('class')
-  progressBar()
+  if(currAttribute !== "quiz-container"){
   if (e.target.textContent === correctAnswer) {
     e.target.setAttribute('class', currAttribute + ' correct animate__animated animate__flash')
     score += 100
@@ -104,8 +130,11 @@ function handleClick(e) {
   } else {
     e.target.setAttribute('class', currAttribute + ' wrong animate__animated animate__jello')
   }
+}
   setTimeout(clearClass, 1500)
-console.log(correctChoices)
+  
+  return questionsCount++
+  
 }
 
 
@@ -120,12 +149,13 @@ function clearClass() {
     }
     arrOptions[i].setAttribute('class', newClass)
   }
+  
   renderQuestion()
 }
 
 
-seconds = 30
-let timer = setInterval(function() {
+let timer =  
+  (setInterval(function() {
     seconds--
   if(seconds < 10) {
     timeDisplay.textContent = `0${seconds}`
@@ -136,11 +166,12 @@ let timer = setInterval(function() {
     getWinner()
   }
 
-}, 1000)
+}, 1000))
+
 
 function getWinner() {
-
-  if(correctChoices > 2) {
+  
+  if(correctChoices > 5) {
     winner = true
   } else {
     winner = false
@@ -150,14 +181,23 @@ function getWinner() {
 
 function renderWinner() {
   if(winner === true) {
+    winnerBox.style.display = "flex"
+    animatedText.innerHTML = `Congratulations!!`
+    displayWinner.textContent = `You know everything about ${category}`
     console.log('congrats! you won!')
-    clearInterval(timer)
+    clearTimeout(timer)
+    seconds = 60
   } else if(winner === false){
-    console.log('Woops! Thta was bad!')
+    winnerBox.style.display= "flex"
+    animatedText.textContent = "Uh-oh!"
+    displayWinner.textContent = ` ${category} is not really your strong point!`
+    console.log('Woops! try again')
+    clearTimeout(timer)
+    seconds = 60
+    init()
 }
 }
-
 function progressBar() {
-  let maxQuestions = 7
-  bar.style.width =`${(questionsCount/maxQuestions) * 100}`
+  let maxQuestions = 10
+  bar.style.width =`${(questionsCount/maxQuestions) * 100}%`
 }

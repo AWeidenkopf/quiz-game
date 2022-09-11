@@ -115,7 +115,7 @@ header {
   background-color: rgb(6, 161, 65);
 }
 
-#computer {
+#sports {
   grid-area: computer;
   width: 40vw;
   margin: 10px auto;
@@ -127,15 +127,37 @@ header {
   border: 1px solid aliceblue;
 }
 
-#computer:hover {
+#sports:hover {
   background-color: rgb(50, 85, 155);
   font-weight: bold;
   box-shadow: 0 0 5px black;
 }
 
-#computer:active {
+#sports:active {
   background-color: rgb(6, 161, 65);
 }
+#random {
+  grid-area: computer;
+  width: 40vw;
+  margin: 10px auto;
+  background-color: rgb(2, 2, 68);
+  border-radius: 20px;
+  height: 5vh;
+  color: aliceblue;
+  box-shadow: 0 0 5px aliceblue;
+  border: 1px solid aliceblue;
+}
+
+#random:hover {
+  background-color: rgb(50, 85, 155);
+  font-weight: bold;
+  box-shadow: 0 0 5px black;
+}
+
+#random:active {
+  background-color: rgb(6, 161, 65);
+}
+
 .resetbtn {
   width: 70px;
   height: 35px;
@@ -237,32 +259,37 @@ header {
 }
 .progress-bar .progress {
   position: absolute;
-  width: 0%;
+  width: 30%;
   height: 100%;
   background-color: rgb(254, 255, 255);
+  animation: progress;
 
 }
 
-@keyframes progress {
-  0% {
-    background-color: aqua;
-  }
-  100% {
-    background-color: aqua;
-  }
+/* Winner box */
+
+#winner-box{
+  border: 3px dotted rgb(61, 136, 202);
+  box-shadow: 0 0 5px;
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: absolute;
+  margin: 0 20px;
+  width: 90vw;
+  height: 60vh;
+  background-color: rgb(4, 9, 90);
+  z-index: 1;
+}
+
+#winner-box > p{
+  color: orangered;
+  font-size: 25px;
 }
 
 
-
-
-/* #progress-bar {
-
-  border: 3px solid white;
-  border-radius: 20px;
-  width: 200px;
-  height: 20px;
-  margin-left: 24vw;
-} */
 
 @media only screen and (min-width: 600px) {
   body {
