@@ -1,4 +1,4 @@
-import {getRandomAnimalQuestion, getRandomFoodQuestion, getRandomSportQuestion, getRandomMovieQuestion} from "../data/data.js";
+import { getRandomAnimalQuestion, getRandomFoodQuestion, getRandomSportQuestion, getRandomMovieQuestion } from "../data/data.js";
 
 /*-------------------------------- Constants --------------------------------*/
 
@@ -8,7 +8,7 @@ const no = new Audio("../assets/audio/incorrect.wav")
 
 /*-------------------------------- Variables --------------------------------*/
 
-let winner, time, category, idx, currQuestion, allQuestions, correctAnswer, score, seconds, correctChoices, questionsCount
+let winner, timer, category, idx, currQuestion, allQuestions, correctAnswer, score, seconds, correctChoices, questionsCount
 
 /*------------------------ Cached Element References ------------------------*/
 // Buttons
@@ -43,13 +43,17 @@ const outerBar = document.querySelector(".progress-bar")
 
 resetBtn.addEventListener("click", init)
 // moviesBtn.addEventListener("click", render)
-playerAnwer.addEventListener('click', handleClick)
+// playerAnwer.addEventListener('click', handleClick)
 categoryBtn.addEventListener('click', render)
 
 /*-------------------------------- Functions --------------------------------*/
 init()
 
 function init() {
+  if (timer) {
+    clearInterval(timer)
+  }
+
   winner = null
   score = 0
   correctChoices = 0
@@ -64,24 +68,22 @@ function init() {
   categoryBox.style.display = "inline-block"
   outerBar.style.display = "none"
   bar.style.width = "0%"
-  
-  
 }
 
-function timer(){
-  clearInterval(time)
-  time =  
-  (setInterval(function() {
-    seconds--
-  if(seconds < 10) {
-    timeDisplay.textContent = `0${seconds}`
-  } else if(seconds >= 10){
-  timeDisplay.textContent = `${seconds}`
-  }if(seconds === 0) { 
-    getWinner()
-  }
+function getTimer() {
+  clearInterval(timer)
+  timer =
+    (setInterval(function () {
+      seconds--
+      if (seconds < 10) {
+        timeDisplay.textContent = `0${seconds}`
+      } else if (seconds >= 10) {
+        timeDisplay.textContent = `${seconds}`
+      } if (seconds === 0) {
+        getWinner()
+      }
 
-}, 1000))
+    }, 1000))
 }
 
 function render(e) {
@@ -89,10 +91,10 @@ function render(e) {
   categoryMsg.style.visibility = "visible"
   resetBtn.style.visibility = "visible"
   scoreDisplay.style.visibility = "visible"
-  
+
   categoryBox.style.display = "none"
   gameContainer.style.display = "flex"
-  if(e.target.textContent !== "Random") {
+  if (e.target.textContent !== "Random") {
     category = e.target.textContent
     categoryMsg.textContent = `${e.target.textContent.toUpperCase()}`
   } else {
@@ -101,69 +103,69 @@ function render(e) {
     console.log(category)
     categoryMsg.textContent = `${category.toUpperCase()}`
   }
-  const currAttribute = e.target.getAttribute('class')
-  if(currAttribute !== "quiz-container" ){
-    renderQuestion()
-  }
+
+  getTimer()
+  renderQuestion()
 }
 
 function renderQuestion() {
-  timer()
-  
-
   scoreDisplay.textContent = `SCORE ${score}`
-  if(category === "Movies") {
+  if (category === "Movies") {
     currQuestion = getRandomMovieQuestion()
-  } else if(category === "Animals") {
+  } else if (category === "Animals") {
     currQuestion = getRandomAnimalQuestion()
-  } else if(category === "Food") {
+  } else if (category === "Food") {
     currQuestion = getRandomFoodQuestion()
   } else {
     currQuestion = getRandomSportQuestion()
-  } 
-  
-  if(allQuestions.length === 10){
+  }
+
+  if (allQuestions.length === 10) {
     setTimeout(getWinner(), 1000)
   }
-  
-  if(!allQuestions.includes(currQuestion)) {
+
+
+  if (!allQuestions.includes(currQuestion)) {
     allQuestions.push(currQuestion)
   } else {
     renderQuestion()
   }
-  
+
   questionDisplay.textContent = currQuestion.question
-  
+
   for (let i = 0; i < arrOptions.length; i++) {
     arrOptions[i].textContent = currQuestion.options[i]
+    arrOptions[i].addEventListener("click", onChooseOption)
   }
-  
+
   progressBar()
   return correctAnswer = currQuestion.answer
-} 
+}
 
 
 
 
-function handleClick(e) {
+
+function onChooseOption(e) {
   const currAttribute = e.target.getAttribute('class')
-  if(currAttribute !== "quiz-container"){
-  if (e.target.textContent === correctAnswer) {
-    e.target.setAttribute('class', currAttribute + ' correct animate__animated animate__flash')
-    yes.play()
-    score += 100
-    correctChoices += 1
-  } else {
-    e.target.setAttribute('class', currAttribute + ' wrong animate__animated animate__jello')
-    no.play()
+  if (currAttribute !== "quiz-container") {
+    if (e.target.textContent === correctAnswer) {
+      e.target.setAttribute('class', currAttribute + ' correct animate__animated animate__flash')
+      yes.play()
+      score += 100
+      correctChoices += 1
+    } else {
+      e.target.setAttribute('class', currAttribute + ' wrong animate__animated animate__jello')
+      if (score >= 50) {
+        score -= 50
+      }
+      no.play()
+    }
   }
-}
   setTimeout(clearClass, 1500)
-  
-  return questionsCount++
-  
-}
 
+  questionsCount++
+}
 
 function clearClass() {
   let newClass = ''
@@ -171,13 +173,13 @@ function clearClass() {
     const currClass = arrOptions[i].getAttribute('class')
     if (currClass.includes('wrong')) {
       newClass = currClass.replace(' wrong animate__animated animate__jello', '')
-      
+
     } else {
       newClass = currClass.replace(' correct animate__animated animate__flash', '')
     }
     arrOptions[i].setAttribute('class', newClass)
   }
-  
+
   renderQuestion()
 }
 
@@ -185,30 +187,30 @@ function clearClass() {
 
 
 function getWinner() {
-  clearInterval(time)
-  if(correctChoices > 5) {
+  clearInterval(timer)
+  if (correctChoices > 5) {
     winner = true
   } else {
     winner = false
-  } 
+  }
   renderWinner()
 }
 
 function renderWinner() {
-  if(winner === true) {
+  if (winner === true) {
     winnerBox.style.display = "flex"
     animatedText.textContent = "Congratulations!!"
     displayWinner.textContent = `You know everything about ${category}`
-  } else if(winner === false){
-    winnerBox.style.display= "flex"
+  } else if (winner === false) {
+    winnerBox.style.display = "flex"
     animatedText.textContent = "Uh-oh!"
-    displayWinner.textContent = `You should probably go grab go read about ${category}!`
+    displayWinner.textContent = `You should probably go read about ${category}!`
   }
-  scoreMsg.textContent = `Your score is ${score}`
+  scoreMsg.textContent = `Your score: ${score}`
   totalMsg.textContent = `You got ${correctChoices} out of 10!`
 }
 
 function progressBar() {
   let maxQuestions = 10
-  bar.style.width =`${(questionsCount/maxQuestions) * 100}%`
+  bar.style.width = `${(questionsCount / maxQuestions) * 100}%`
 }
