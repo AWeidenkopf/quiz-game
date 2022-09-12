@@ -34,6 +34,7 @@ const animatedText = document.querySelector(".text")
 
 //Progress bar
 const bar = document.querySelector(".progress")
+const outerBar = document.querySelector(".progress-bar")
 
 
 /*----------------------------- Event Listeners -----------------------------*/
@@ -59,7 +60,9 @@ function init() {
   scoreDisplay.style.visibility = "hidden"
   gameContainer.style.display = "none"
   categoryBox.style.display = "inline-block"
+  outerBar.style.display = "none"
   bar.style.width = "0%"
+  
   
 }
 
@@ -80,6 +83,7 @@ function timer(){
 }
 
 function render(e) {
+  outerBar.style.display = "flex"
   categoryMsg.style.visibility = "visible"
   resetBtn.style.visibility = "visible"
   scoreDisplay.style.visibility = "visible"
