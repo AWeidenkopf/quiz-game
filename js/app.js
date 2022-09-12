@@ -182,7 +182,8 @@ function getWinner() {
 function renderWinner() {
   if(winner === true) {
     winnerBox.style.display = "flex"
-    animatedText.innerHTML = `Congratulations!!`
+    animatedText.textContent = "Congratulations!!"
+    setTimeout(animatedText, 4000)
     displayWinner.textContent = `You know everything about ${category}`
     console.log('congrats! you won!')
     clearTimeout(timer)
