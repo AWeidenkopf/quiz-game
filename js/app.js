@@ -6,7 +6,7 @@ const categories = ["Movies", "Animals", "Food", "Sports"]
 
 /*-------------------------------- Variables --------------------------------*/
 
-let winner, timer, category, idx, currQuestion, allQuestions, correctAnswer, score, seconds, correctChoices, questionsCount
+let winner, time, category, idx, currQuestion, allQuestions, correctAnswer, score, seconds, correctChoices, questionsCount
 
 /*------------------------ Cached Element References ------------------------*/
 // Buttons
@@ -58,22 +58,24 @@ function init() {
   gameContainer.style.display = "none"
   categoryBox.style.display = "inline-block"
   bar.style.width = "0%"
-
-  timer =  
-    (setInterval(function() {
-      seconds--
-    if(seconds < 10) {
-      timeDisplay.textContent = `0${seconds}`
-    } else if(seconds >= 10){
-    timeDisplay.textContent = `${seconds}`
-    }if(seconds === 0) { 
-      clearInterval(timer)
-      getWinner()
-    }
   
-  }, 1000))
 }
 
+function timer(){
+  clearInterval(time)
+  time =  
+  (setInterval(function() {
+    seconds--
+  if(seconds < 10) {
+    timeDisplay.textContent = `0${seconds}`
+  } else if(seconds >= 10){
+  timeDisplay.textContent = `${seconds}`
+  }if(seconds === 0) { 
+    getWinner()
+  }
+
+}, 1000))
+}
 
 function render(e) {
   categoryMsg.style.visibility = "visible"
@@ -98,7 +100,7 @@ function render(e) {
 }
 
 function renderQuestion() {
-
+  timer()
   
 
   scoreDisplay.textContent = `SCORE ${score}`
@@ -113,7 +115,7 @@ function renderQuestion() {
   } 
   
   if(allQuestions.length === 10){
-    return getWinner()
+    setTimeout(getWinner(), 1000)
   }
   
   if(!allQuestions.includes(currQuestion)) {
@@ -172,7 +174,7 @@ function clearClass() {
 
 
 function getWinner() {
-  
+  clearInterval(time)
   if(correctChoices > 5) {
     winner = true
   } else {
@@ -186,12 +188,10 @@ function renderWinner() {
     winnerBox.style.display = "flex"
     animatedText.textContent = "Congratulations!!"
     displayWinner.textContent = `You know everything about ${category}`
-    clearTimeout(timer)
   } else if(winner === false){
     winnerBox.style.display= "flex"
     animatedText.textContent = "Uh-oh!"
-    displayWinner.textContent = `You should probably go grab a book about ${category}!`
-    clearTimeout(timer)
+    displayWinner.textContent = `You should probably go grab a book on ${category}!`
 }
 }
 
