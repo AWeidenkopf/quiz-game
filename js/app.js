@@ -3,18 +3,17 @@ import { getRandomAnimalQuestion, getRandomFoodQuestion, getRandomSportQuestion,
 /*-------------------------------- Constants --------------------------------*/
 
 const categories = ["Movies", "Animals", "Food", "Sports"]
-const yes = new Audio("../assets/audio/correct.mp3")
-const no = new Audio("../assets/audio/incorrect.wav")
+const correctAudio = new Audio("../assets/audio/correct.mp3")
+const incorrectAudio = new Audio("../assets/audio/incorrect.wav")
 
 /*-------------------------------- Variables --------------------------------*/
 
-let winner, timer, category, idx, currQuestion, allQuestions, correctAnswer, score, seconds, correctChoices, questionsCount
+let winner, timer, category, idx, currQuestion, allQuestions, 
+correctAnswer, score, seconds, correctChoices, questionsCount
 
 /*------------------------ Cached Element References ------------------------*/
 // Buttons
 const resetBtn = document.getElementById("reset")
-
-// const moviesBtn = document.getElementById("movies")
 const categoryBtn = document.getElementById("categoriesBtns")
 
 // Containers
@@ -42,9 +41,7 @@ const outerBar = document.querySelector(".progress-bar")
 /*----------------------------- Event Listeners -----------------------------*/
 
 resetBtn.addEventListener("click", init)
-// moviesBtn.addEventListener("click", render)
-// playerAnwer.addEventListener('click', handleClick)
-categoryBtn.addEventListener('click', render)
+categoryBtn.addEventListener('click', getCategory)
 
 /*-------------------------------- Functions --------------------------------*/
 init()
@@ -82,18 +79,17 @@ function getTimer() {
       } if (seconds === 0) {
         getWinner()
       }
-
     }, 1000))
 }
 
-function render(e) {
+function getCategory(e) {
   outerBar.style.display = "flex"
   categoryMsg.style.visibility = "visible"
   resetBtn.style.visibility = "visible"
   scoreDisplay.style.visibility = "visible"
-
   categoryBox.style.display = "none"
   gameContainer.style.display = "flex"
+
   if (e.target.textContent !== "Random") {
     category = e.target.textContent
     categoryMsg.textContent = `${e.target.textContent.toUpperCase()}`
@@ -139,11 +135,8 @@ function renderQuestion() {
   }
 
   progressBar()
-  return correctAnswer = currQuestion.answer
+  correctAnswer = currQuestion.answer
 }
-
-
-
 
 
 function onChooseOption(e) {
@@ -151,7 +144,7 @@ function onChooseOption(e) {
   if (currAttribute !== "quiz-container") {
     if (e.target.textContent === correctAnswer) {
       e.target.setAttribute('class', currAttribute + ' correct animate__animated animate__flash')
-      yes.play()
+      correctAudio.play()
       score += 100
       correctChoices += 1
     } else {
@@ -159,15 +152,15 @@ function onChooseOption(e) {
       if (score >= 50) {
         score -= 50
       }
-      no.play()
+      incorrectAudio.play()
     }
   }
-  setTimeout(clearClass, 1500)
+  setTimeout(resetOption, 1500)
 
   questionsCount++
 }
 
-function clearClass() {
+function resetOption() {
   let newClass = ''
   for (let i = 0; i < arrOptions.length; i++) {
     const currClass = arrOptions[i].getAttribute('class')
@@ -200,14 +193,14 @@ function renderWinner() {
   if (winner === true) {
     winnerBox.style.display = "flex"
     animatedText.textContent = "Congratulations!!"
-    displayWinner.textContent = `You know everything about ${category}`
+    displayWinner.textContent = `You are an expert on ${category}`
   } else if (winner === false) {
     winnerBox.style.display = "flex"
     animatedText.textContent = "Uh-oh!"
     displayWinner.textContent = `You should probably go read about ${category}!`
   }
-  scoreMsg.textContent = `Your score: ${score}`
-  totalMsg.textContent = `You got ${correctChoices} out of 10!`
+  scoreMsg.textContent = `Your score:  ${score}`
+  totalMsg.textContent = `You got  ${correctChoices} out of 10!`
 }
 
 function progressBar() {
