@@ -252,7 +252,7 @@ header {
 /* progress bar */
 
 .progress-bar {
-  margin-top: 25px;
+  margin-top: 45px;
   margin-left: 23vw;
   border: 3px solid;
   border-radius: 10px;
@@ -267,8 +267,6 @@ header {
   width: 30%;
   height: 100%;
   background-color: rgb(213, 88, 25);
-  animation: progress;
-
 }
 
 /* Winner box */
@@ -277,7 +275,12 @@ header {
   border: 3px dotted rgb(61, 136, 202);
   box-shadow: 0 0 5px 5px;
   border-radius: 3px;
-  display: flex;
+  /* display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 2;
+  grid-template-areas: 
+  "p1"
+  "p2"; */
   align-items: center;
   text-align: center;
   position: absolute;
@@ -292,12 +295,14 @@ header {
 }
 
 #winner-box > p{
-  display: flex;
   color: orangered;
   font-size: 25px;
+  margin: 5px 30px;
 }
 
-
+.text {
+  grid-area: p1;
+}
 
 @media only screen and (min-width: 600px) {
   body {
