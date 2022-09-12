@@ -313,6 +313,19 @@ header {
     min-height: 110vh;
   } 
 
+  header {
+    font-size: 25px;
+  }
+
+  #category-box{
+    width: 40vw;
+    font-size: 30px;
+  }
+
+  #categoriesBtns > button {
+    font-size: 24px;
+  }
+
   #board {
     display: flex;
     justify-content: center;
@@ -327,14 +340,14 @@ header {
     border: 3px solid black;
     display: flex;
     margin-left: 40vw;
-    margin-top: -7vh;
+    margin-top: 15vh;
     justify-content: center;
-    align-items: center;
-    position: absolute;
-    border-radius: 50%;
-    height: 13%;
-    width: 18%;
-    background-color: white;
+  align-items: center;
+  position: absolute;
+  border-radius: 50%;
+  height: 8%;
+  width: 17%;
+  background-color: rgb(4, 9, 90);
   }
 
   #quiz-container {
