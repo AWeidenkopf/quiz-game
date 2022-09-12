@@ -289,14 +289,21 @@ header {
   border-radius: 20px;
   box-shadow: 2px 2px 5px rgb(89, 0, 255);
 }
+.animate__animated.animate__fadeInDown{
+  --animate-duration: 3s;
+}
+
 #winner-box > h2 {
   position: relative;
   margin: 30px;
-
+  color: rgb(227, 122, 37);
+  letter-spacing: 4px;
+  font-weight: bold;
+  font-size: 25px;
 }
 
+
 #winner-box > p {
-  color: orangered;
   font-size: 25px;
 }
 

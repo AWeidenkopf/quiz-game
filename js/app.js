@@ -200,7 +200,7 @@ function renderWinner() {
   } else if(winner === false){
     winnerBox.style.display= "flex"
     animatedText.textContent = "Uh-oh!"
-    displayWinner.textContent = `You should probably go grab a book on ${category}!`
+    displayWinner.textContent = `You should probably go grab go read about ${category}!`
 }
 }
 
