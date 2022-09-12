@@ -3,6 +3,8 @@ import {getRandomAnimalQuestion, getRandomFoodQuestion, getRandomSportQuestion, 
 /*-------------------------------- Constants --------------------------------*/
 
 const categories = ["Movies", "Animals", "Food", "Sports"]
+const yes = new Audio("../assets/audio/correct.mp3")
+const no = new Audio("../assets/audio/incorrect.wav")
 
 /*-------------------------------- Variables --------------------------------*/
 
@@ -142,10 +144,12 @@ function handleClick(e) {
   if(currAttribute !== "quiz-container"){
   if (e.target.textContent === correctAnswer) {
     e.target.setAttribute('class', currAttribute + ' correct animate__animated animate__flash')
+    yes.play()
     score += 100
     correctChoices += 1
   } else {
     e.target.setAttribute('class', currAttribute + ' wrong animate__animated animate__jello')
+    no.play()
   }
 }
   setTimeout(clearClass, 1500)
@@ -161,6 +165,7 @@ function clearClass() {
     const currClass = arrOptions[i].getAttribute('class')
     if (currClass.includes('wrong')) {
       newClass = currClass.replace(' wrong animate__animated animate__jello', '')
+      
     } else {
       newClass = currClass.replace(' correct animate__animated animate__flash', '')
     }
