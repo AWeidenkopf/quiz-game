@@ -31,6 +31,8 @@ const playerAnwer = document.getElementById("quiz-container")
 const timeDisplay = document.getElementById("timer")
 const displayWinner = document.getElementById("winner-text")
 const animatedText = document.querySelector(".text")
+const scoreMsg = document.getElementById("score-text")
+const totalMsg = document.getElementById("total")
 
 //Progress bar
 const bar = document.querySelector(".progress")
@@ -201,7 +203,9 @@ function renderWinner() {
     winnerBox.style.display= "flex"
     animatedText.textContent = "Uh-oh!"
     displayWinner.textContent = `You should probably go grab go read about ${category}!`
-}
+  }
+  scoreMsg.textContent = `Your score is ${score}`
+  totalMsg.textContent = `You got ${correctChoices} out of 10!`
 }
 
 function progressBar() {
