@@ -7,7 +7,7 @@ And second, I think quizzes are great to help knowledge sink in, so I thought it
 
 Game:
 
-![Screenshot 1] (../assets/Screenshot-1.png?raw=true "Screenshot category view")
+![Screenshot 1] (/assets/Screenshot-1.png?raw=true "Screenshot category view")
 
 Getting Started: 
 
