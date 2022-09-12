@@ -275,12 +275,6 @@ header {
   border: 3px dotted rgb(61, 136, 202);
   box-shadow: 0 0 5px 5px;
   border-radius: 3px;
-  /* display: grid;
-  grid-template-columns: 100%;
-  grid-template-rows: 2;
-  grid-template-areas: 
-  "p1"
-  "p2"; */
   align-items: center;
   text-align: center;
   position: absolute;
@@ -293,16 +287,22 @@ header {
   linear-gradient(to top right, rgb(4, 2, 56), transparent);
   z-index: 1;
 }
+#winner-box > h2 {
+  position: relative;
+  display: block;
+
+  margin: 0px 30px;
+
+}
 
 #winner-box > p{
   color: orangered;
+  display: block;
+  width: 50px;
   font-size: 25px;
   margin: 5px 30px;
 }
 
-.text {
-  grid-area: p1;
-}
 
 @media only screen and (min-width: 600px) {
   body {
