@@ -27,6 +27,6 @@ https://ana-weidenkopf-quiz.netlify.app/
 ## Next Steps:
 
 - [ ] Implement more categories
-- [ ]Give use to the score gained (maybe link the quiz game with a pet simulater game, where you are able to use the score/coins to buy things for your pet)
+- [ ] Give use to the score gained (maybe link the quiz game with a pet simulater game, where you are able to use the score/coins to buy things for your pet)
 
 
