@@ -1,9 +1,9 @@
-# quiz-game
+# Quiz Game
 
 ## Motivation: 
 
 I've chosen to do a quiz game for two reasons. First, I used to love quizzes. Ever since a little girl, quizzes were always great fun for me.
-And second, I think quizzes are great to help the knowledge sink in, so I thought it would be fun to be able to create something that could be useful for education.
+And second, I think quizzes are great to help knowledge sink in, so I thought it would be fun to be able to create something that could be useful in education.
 
 ## Game screenshots: 
 
@@ -20,3 +20,10 @@ https://ana-weidenkopf-quiz.netlify.app/
 ⊛ CSS
 ⊛ JavaScript
 ⊛ CSS Library: animate.style
+
+## Next Steps:
+
+⊛ Implement more categories
+⊛ Give use to the score gained (maybe link the quiz game with a pet simulater game, where you are able to use the score/coins to buy things for your pet)
+
+
