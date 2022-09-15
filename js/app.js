@@ -96,7 +96,6 @@ function getCategory(e) {
   } else {
     idx = Math.floor(Math.random() * categories.length)
     category = categories[idx]
-    console.log(category)
     categoryMsg.textContent = `${category.toUpperCase()}`
   }
 
