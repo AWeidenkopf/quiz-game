@@ -8,8 +8,8 @@ const incorrectAudio = new Audio("../assets/audio/incorrect.wav")
 
 /*-------------------------------- Variables --------------------------------*/
 
-let winner, timer, category, idx, currQuestion, allQuestions, 
-correctAnswer, score, seconds, correctChoices, questionsCount
+let winner, timer, category, idx, currQuestion, allQuestions,
+  correctAnswer, score, seconds, correctChoices, questionsCount
 
 /*------------------------ Cached Element References ------------------------*/
 // Buttons
