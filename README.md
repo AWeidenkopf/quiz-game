@@ -25,9 +25,15 @@ https://ana-weidenkopf-quiz.netlify.app/
 - JavaScript
 - CSS Library: animate.style
 
+## Credits:
+
+- Sounds from : freesound.org/
+
 ## Next Steps:
 
 - [ ] Implement more categories
 - [ ] Give use to the score gained (maybe link the quiz game to a pet simulater game, where you are able to use the score/coins to buy things for your pet)
+- [ ] Add background music
+- [ ] Implement sound when the game ends
 
 
